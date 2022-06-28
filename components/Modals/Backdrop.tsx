@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { MouseEventHandler } from "react";
 
 interface Props {
     children: JSX.Element;
-    onClick: Function;
+    onClick: MouseEventHandler;
+
 }
 
 const Backdrop = ({ children, onClick }: Props) => {

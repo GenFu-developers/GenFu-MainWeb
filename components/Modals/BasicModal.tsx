@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { MouseEventHandler } from "react";
 import Button from "../Button";
 import Backdrop from "./Backdrop";
 
@@ -25,7 +26,7 @@ const dropIn = {
 
 interface Props {
     children: JSX.Element;
-    handleClose: Function;
+    handleClose: MouseEventHandler;
     modalOpen: boolean;
 }
 
