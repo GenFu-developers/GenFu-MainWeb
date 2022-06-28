@@ -6,21 +6,7 @@ import { urlFor } from '../../sanity'
 import { motion } from 'framer-motion'
 
 function BlogListEntry(props: Post) {
-    const monthDict = {
-        0: 'Jan',
-        1: 'Feb',
-        2: 'März',
-        3: 'Apr',
-        4: 'Mai',
-        5: 'Jun',
-        6: 'Jul',
-        7: 'Aug',
-        8: 'Sep',
-        9: 'Okt',
-        10: 'Nov',
-        11: 'Dez',
-
-    }
+    const monthDict = ['Jan', 'Feb', 'März', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez',]
     const rawDate = new Date(props._createdAt)
     const date = {
         day: rawDate.getDate(),
