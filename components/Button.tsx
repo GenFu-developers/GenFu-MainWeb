@@ -26,7 +26,7 @@ function Button({ buttonStyle, callback, type, href, className, children, loadin
     return (
         <motion.div className={`${style[buttonStyle]} py-2 px-4 w-max cursor-pointer ${className ? className : ''}`} onClick={() => { if (callback) return callback() }}
             whileTap={{ scale: .9 }} whileHover={{ scale: 1.025, filter: 'brightness(110%)' }}>
-            {NEXT_PUBLIC_SANITY_DATASETtype == 'button' ?
+            {type == 'button' ?
                 /* type === Button */
                 <div>{children}</div>
                 :
