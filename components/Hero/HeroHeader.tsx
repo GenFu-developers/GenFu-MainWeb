@@ -12,8 +12,7 @@ export default function Header() {
                         <a href="/" className="mb-6 sm:mx-auto">
                             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
                                 <svg
-                                    className="w-10 h-10 text-deep-purple-900"
-                                    stroke="#00abe1"
+                                    className="animate-pulse duration-1000 delay-1000 w-10 h-10 stroke-primary/40"
                                     viewBox="0 0 52 52"
                                 >
                                     <polygon
@@ -32,7 +31,7 @@ export default function Header() {
                                     <svg
                                         viewBox="0 0 52 24"
                                         fill="currentColor"
-                                        className="absolute top-0 -left-40 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                                        className="absolute top-0 -left-40 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 lg:block"
                                     >
                                         <defs>
                                             <pattern
@@ -54,7 +53,7 @@ export default function Header() {
                                 </span>
                                 <HeroHeaderText />
                             </h2>
-                            <Modal buttonText="Analysegespräch" buttonStyle="primary" buttonClassName="mx-auto">
+                            <Modal buttonText="Analysegespräch" buttonStyle="primary" buttonClassName="relative mx-auto top-12">
                                 <div>
                                     this is my fuucking test modal pls work !
                                 </div>

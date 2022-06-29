@@ -45,10 +45,9 @@ export default function Feature() {
             <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
-                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 text-deep-purple-accent-400"
-                                stroke="currentColor"
+                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -77,10 +76,9 @@ export default function Feature() {
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
-                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 text-deep-purple-accent-400"
-                                stroke="currentColor"
+                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -112,10 +110,9 @@ export default function Feature() {
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
-                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 text-deep-purple-accent-400"
-                                stroke="currentColor"
+                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -147,10 +144,9 @@ export default function Feature() {
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
-                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
+                        <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 text-deep-purple-accent-400"
-                                stroke="currentColor"
+                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon

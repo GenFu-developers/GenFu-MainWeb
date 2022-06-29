@@ -4,6 +4,7 @@ import { sanityClient } from '../sanity'
 import { ShopCategory } from '../typings'
 import ShopCategoryCard from '../components/Shop/ShopCategoryCard'
 import { motion } from 'framer-motion'
+import Footer from '../components/Footer'
 
 interface Props {
     shopCategorys: [ShopCategory]
@@ -11,9 +12,9 @@ interface Props {
 
 function Shop({ shopCategorys }: Props) {
     return (
-        <div className="bg-background-light dark:bg-background-dark h-screen">
+        <div className="bg-background-light dark:bg-background-dark">
             <Navbar />
-            <motion.div initial="hidden" animate="visible" variants={{
+            <motion.div className="min-h-screen" initial="hidden" animate="visible" variants={{
                 hidden: {
                     scale: .8,
                     opacity: 0,
@@ -37,6 +38,7 @@ function Shop({ shopCategorys }: Props) {
                 </div>
 
             </motion.div >
+            <Footer />
         </div >
     )
 }

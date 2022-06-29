@@ -55,6 +55,18 @@ function Navbar() {
                             { 'name': 'Angebot', 'href': '/#angebot' },
                             { 'name': 'partner', 'href': '/#partner' }
                         ]} />
+                        <NavLink name='Link 2' href='/' dropDownLinks={[
+                            { 'name': 'Angebot', 'href': '/#angebot' },
+                            { 'name': 'partner', 'href': '/#partner' }
+                        ]} />
+                        <NavLink name='Link 3' href='/' dropDownLinks={[
+                            { 'name': 'Angebot', 'href': '/#angebot' },
+                            { 'name': 'partner', 'href': '/#partner' }
+                        ]} />
+                        <NavLink name='Link 4' href='/' dropDownLinks={[
+                            { 'name': 'Angebot', 'href': '/#angebot' },
+                            { 'name': 'partner', 'href': '/#partner' }
+                        ]} />
                     </div>
                     <Link
                         href="/"
@@ -77,7 +89,7 @@ function Navbar() {
                                 <rect x="14" y="1" width="7" height="6" />
                                 <rect x="14" y="11" width="7" height="12" />
                             </svg>
-                            <span className="ml-2 text-xl font-bold tracking-wide uppercase">
+                            <span className="ml-2 text-xl font-bold tracking-wide uppercase w-max">
                                 GenFu Webservice
                             </span>
                         </div>
@@ -124,13 +136,10 @@ function Navbar() {
                         </li>
                     </ul>
                     <div className="ml-auto lg:hidden">
-                        <button
-                            aria-label="Open Menu"
-                            title="Open Menu"
+                        <Button type='button' buttonStyle='none'
                             className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                            onClick={() => setIsMenuOpen(true)}
-                        >
-                            <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+                            callback={() => setIsMenuOpen(true)}>
+                            <svg className="w-5 text-txt-dark dark:text-txt-light" viewBox="0 0 24 24">
                                 <path
                                     fill="currentColor"
                                     d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -144,10 +153,10 @@ function Navbar() {
                                     d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
                                 />
                             </svg>
-                        </button>
+                        </Button>
                         {isMenuOpen && (
                             <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-white border rounded shadow-sm">
+                                <div className="p-5 bg-background-light dark:bg-background-dark rounded shadow-sm">
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <Link
@@ -181,11 +190,8 @@ function Navbar() {
                                         </div>
                                         <div>
                                             <button
-                                                aria-label="Close Menu"
-                                                title="Close Menu"
-                                                className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                                                onClick={() => setIsMenuOpen(false)}
-                                            >
+                                                className="p-2 -mt-2 -mr-2 transition duration-300"
+                                                onClick={() => setIsMenuOpen(false)}>
                                                 <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
                                                     <path
                                                         fill="currentColor"
@@ -195,58 +201,24 @@ function Navbar() {
                                             </button>
                                         </div>
                                     </div>
-                                    <nav>
+                                    <nav className='z-50'>
                                         <ul className="space-y-4">
-                                            <li>
-                                                <Link
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Product
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Features
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Pricing
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/"
-                                                    aria-label="Sign in"
-                                                    title="Sign in"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Über Uns
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
-                                                >
-                                                    Demos
-                                                </Link>
-                                            </li>
+                                            <NavLink mobile={true} name='Home' href='/' dropDownLinks={[
+                                                { 'name': 'Angebot', 'href': '/#angebot' },
+                                                { 'name': 'partner', 'href': '/#partner' }
+                                            ]} />
+                                            <NavLink mobile={true} name='Link 2' href='/' dropDownLinks={[
+                                                { 'name': 'Angebot', 'href': '/#angebot' },
+                                                { 'name': 'partner', 'href': '/#partner' }
+                                            ]} />
+                                            <NavLink mobile={true} name='Link 3' href='/' dropDownLinks={[
+                                                { 'name': 'Angebot', 'href': '/#angebot' },
+                                                { 'name': 'partner', 'href': '/#partner' }
+                                            ]} />
+                                            <NavLink mobile={true} name='Link 4' href='/' dropDownLinks={[
+                                                { 'name': 'Angebot', 'href': '/#angebot' },
+                                                { 'name': 'partner', 'href': '/#partner' }
+                                            ]} />
                                         </ul>
                                     </nav>
                                 </div>

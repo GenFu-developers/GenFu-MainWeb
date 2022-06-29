@@ -44,10 +44,10 @@ export default function Steps() {
             </div>
             <div className="grid gap-8 row-gap-0 lg:grid-cols-3">
                 <div className="relative text-center">
-                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400 sm:w-20 sm:h-20">
                         <svg
-                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
-                            stroke="currentColor"
+                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16 stroke-txt-dark dark:stroke-txt-light"
+                            stroke="none"
                             viewBox="0 0 52 52"
                         >
                             <polygon
@@ -95,10 +95,10 @@ export default function Steps() {
                     </div>
                 </div>
                 <div className="relative text-center">
-                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400 sm:w-20 sm:h-20">
                         <svg
-                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
-                            stroke="currentColor"
+                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16 stroke-txt-dark dark:stroke-txt-light"
+                            stroke="none"
                             viewBox="0 0 52 52"
                         >
                             <polygon
@@ -146,10 +146,10 @@ export default function Steps() {
                     </div>
                 </div>
                 <div className="relative text-center">
-                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400 sm:w-20 sm:h-20">
                         <svg
-                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
-                            stroke="currentColor"
+                            className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16 stroke-txt-dark dark:stroke-txt-light"
+                            stroke="none"
                             viewBox="0 0 52 52"
                         >
                             <polygon
