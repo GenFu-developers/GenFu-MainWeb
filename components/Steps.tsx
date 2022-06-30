@@ -1,50 +1,7 @@
-import Button from "./Button";
-
-interface RenderStep {
-    title: string;
-    text: string;
-    number: number;
-}
-
-const stepsData = [
-    {
-        title: 'title 1',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 1
-    },
-    {
-        title: 'title 2',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 2
-    },
-    {
-        title: 'title 3',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 3
-    },
-    {
-        title: 'title 4',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 4
-    },
-    {
-        title: 'title 5',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 5
-    },
-    {
-        title: 'title 6',
-        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat distinctio laudantium nihil sequi unde blanditiis in obcaecati atque possimus dolorem, est, beatae iusto dicta eos nostrum commodi quibusdam. Non.',
-        number: 6
-    },
-]
-
 export default function Steps() {
-
-
     return (
         <section className="text-gray-600 body-font px-5 mb-10">
-            <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+            <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 mx-auto">
                 <div className="flex relative pb-12">
                     <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                         <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>

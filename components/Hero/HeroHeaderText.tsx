@@ -28,14 +28,19 @@ function HeroHeaderText() {
                 <div className='flex gap-1 md:gap-3'>
                     <span className={`${basicTextStyle} ${activeTab.title === tabs[0].title ? 'text-secondary' : ''}`}
                         onClick={() => { setActiveTab(tabs[0]) }}>
-                        {`${tabs[0].title} `} &#8211;
+                        {`${tabs[0].title} `}
+                        <svg className='mt-px scale-75 lg:scale-100' width="20" height="21" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.1745 23.4244L18.2239 15.375H0.250118V11.625H18.2239L10.1745 3.57563L12.8257 0.924377L25.4014 13.5L12.8257 26.0756L10.1745 23.4244Z" fill="white" />
+                        </svg>
                     </span>
                     {''}
                     <span className={`${basicTextStyle} ${activeTab.title === tabs[1].title ? 'text-secondary' : ''}`}
                         onClick={() => { setActiveTab(tabs[1]) }}>
                         {`${tabs[1].title}`}
+                        <svg className='mt-px scale-75 lg:scale-100' width="20" height="21" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.1745 23.4244L18.2239 15.375H0.250118V11.625H18.2239L10.1745 3.57563L12.8257 0.924377L25.4014 13.5L12.8257 26.0756L10.1745 23.4244Z" fill="white" />
+                        </svg>
                     </span>
-                    <span className='-translate-y-px md:-translate-y-2'>&#8594;</span>
                     <span className={`${basicTextStyle} ${activeTab.title === tabs[2].title ? 'text-secondary' : ''}`}
                         onClick={() => { setActiveTab(tabs[2]) }}>
                         {`${tabs[2].title}`}
