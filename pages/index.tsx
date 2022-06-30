@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
 // custom components
 import Navbar from '../components/Navbar'
 import Header from '../components/Hero/HeroHeader'
@@ -11,14 +10,14 @@ import Footer from '../components/Footer'
 import Team from '../components/Team'
 import Partner from '../components/Partner'
 
-
 export default function Home() {
+
   return (
-    <div className="bg-background-light dark:bg-background-dark">
-      <Head>
+    <div className='background-light dark:background-dark'>
+      < Head >
         <title>GenFu Webservice</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head >
       <Navbar />
       <Header />
       <Product />

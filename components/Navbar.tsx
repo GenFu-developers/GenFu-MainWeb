@@ -1,24 +1,18 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import Link from 'next/link';
-import { useTheme } from 'next-themes'
-import NavLink from './NavLink';
-import Button from './Button';
+import { useState, useRef, useEffect } from "react"
+import { useTheme } from "next-themes";
+import Button from "./Button";
 
-function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => {
-        setMounted(true);
-    }, [])
-    const { systemTheme, theme, setTheme } = useTheme();
-    const switchTheme = () => {
-        theme === 'dark' ? setTheme('light') : setTheme('dark')
-    }
+// Profile Dropdown
+
+export default () => {
     const renderThemeChanger = () => {
-        if (!mounted) return null;
-
+        const { systemTheme, theme, setTheme } = useTheme();
+        const switchTheme = () => {
+            theme === 'dark' ? setTheme('light') : setTheme('dark')
+        }
         const currentTheme = theme === "system" ? systemTheme : theme;
+        console.log(currentTheme);
+
         function getThemeImage() {
             const translateString = '-translate-y-2 -translate-x-3'
             if (currentTheme === "dark") {
@@ -44,191 +38,75 @@ function Navbar() {
         )
     };
 
-
+    const [menuState, setMenuState] = useState(false)
+    // Replace javascript:void(0) path with your path
+    const navigation = [
+        { title: "Home", path: "/" },
+        { title: "Partner", path: "/#partner" },
+        { title: "Vorgang", path: "/#vorgang" },
+        { title: "Über uns", path: "/#über-uns" },
+        { title: "Angebote", path: "/shop" },
+    ]
     return (
-        <div className="bg-background-light dark:bg-background-dark shadow-md">
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8">
-                <div className="relative grid items-center grid-cols-2 lg:grid-cols-3 w-full text-txt-dark dark:text-txt-light">
-                    {/* NavLinks left */}
-                    <div className='hidden lg:flex'>
-                        <NavLink name='Home' href='/' dropDownLinks={[
-                            { 'name': 'Angebot', 'href': '/#angebot' },
-                            { 'name': 'partner', 'href': '/#partner' }
-                        ]} />
-                        <NavLink name='Link 2' href='/' dropDownLinks={[
-                            { 'name': 'Angebot', 'href': '/#angebot' },
-                            { 'name': 'partner', 'href': '/#partner' }
-                        ]} />
-                        <NavLink name='Link 3' href='/' dropDownLinks={[
-                            { 'name': 'Angebot', 'href': '/#angebot' },
-                            { 'name': 'partner', 'href': '/#partner' }
-                        ]} />
-                        <NavLink name='Link 4' href='/' dropDownLinks={[
-                            { 'name': 'Angebot', 'href': '/#angebot' },
-                            { 'name': 'partner', 'href': '/#partner' }
-                        ]} />
+        <nav className="bg-light-container dark:bg-dark-container shadow-lg">
+            <div className="flex items-center space-x-8 py-3 px-4 max-w-screen-xl mx-auto">
+                <div className="flex-none lg:flex-initial">
+                    <a href="/">
+                        {/* <img
+                            src="https://www.floatui.com/logo.svg"
+                            width={120}
+                            height={50}
+                            alt="Float UI logo"
+                        /> */}
+                        <span className="text-3xl font-black text-txt-dark dark:text-txt-light">GenFu</span>
+                    </a>
+                </div>
+                <div className="flex-1 flex items-center justify-between">
+                    <div className={`bg-light-container dark:bg-dark-container absolute z-20 w-full top-16 left-0 p-4 border-b lg:static lg:block lg:border-none ${menuState ? '' : 'hidden'}`}>
+                        <ul className="mt-12 space-y-5 lg:flex lg:space-x-6 lg:space-y-0 lg:mt-0">
+                            {
+                                navigation.map((item, idx) => (
+                                    <li key={idx} className="text-txt-dark/70 dark:text-txt-light/70  hover:text-gray-900">
+                                        <a href={item.path}>
+                                            {item.title}
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+
                     </div>
-                    <Link
-                        href="/"
-                        aria-label="Company"
-                        title="Company"
-                    >
-                        <div className="inline-flex items-center lg:mx-auto cursor-pointer">
-                            <svg
-                                className="w-8 text-teal-accent-400"
-                                viewBox="0 0 24 24"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeMiterlimit="10"
-                                stroke="currentColor"
-                                fill="white"
-                            >
-                                <rect x="3" y="1" width="7" height="12" />
-                                <rect x="3" y="17" width="7" height="6" />
-                                <rect x="14" y="1" width="7" height="6" />
-                                <rect x="14" y="11" width="7" height="12" />
+                    <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-6 scale-90 md:scale-100">
+                        <form className="flex items-center space-x-2 border rounded-md p-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-none stroke-txt-dark dark:stroke-txt-light" fill="none" viewBox="0 0 24 24" >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                            <span className="ml-2 text-xl font-bold tracking-wide uppercase w-max">
-                                GenFu Webservice
-                            </span>
-                        </div>
-                    </Link>
-
-                    <ul className="items-center hidden ml-auto space-x-8 lg:flex">
-                        <li className=''>
-                            <Link
-                                href="/blog"
-                                aria-label="Sign in"
-                                title="Sign in"
-                                className="my-auto mx-auto font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                <div className="font-medium tracking-wide  transition-colors duration-200   link link-underline link-underline-black cursor-pointer">
-                                    Blog
-                                </div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/demos"
-                                className=""
-                                aria-label="Demos"
-                                title="Demos"
-                            >
-                                <Button type='link' href='/demos' buttonStyle='primary'>
-                                    <h1>Demos</h1>
-                                </Button>
-
-                            </Link>
-                        </li>
-                        <li>
-                            <Button type='link' href='/shop' buttonStyle='success'>
-                                <div className='flex gap-1'>
-                                    <svg className='my-auto' width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.33 5H11.5L11.11 2.67C11.0314 2.31747 10.8589 1.9928 10.6106 1.73046C10.3624 1.46811 10.0477 1.2779 9.70003 1.18C9.35074 1.06763 8.98688 1.00698 8.62003 1H6.38003C6.01317 1.00698 5.64931 1.06763 5.30003 1.18C4.95236 1.2779 4.6377 1.46811 4.38944 1.73046C4.14119 1.9928 3.96861 2.31747 3.89003 2.67L3.50003 5H1.67003C1.59126 4.99952 1.5135 5.01766 1.44308 5.05293C1.37266 5.0882 1.31156 5.13961 1.26478 5.20297C1.21799 5.26633 1.18683 5.33984 1.17384 5.41753C1.16085 5.49521 1.1664 5.57487 1.19003 5.65L3.07003 11.95C3.16574 12.2543 3.35599 12.5202 3.61316 12.7091C3.87032 12.8979 4.18099 12.9998 4.50003 13H10.5C10.8174 12.9977 11.1258 12.8948 11.3809 12.7061C11.6361 12.5175 11.8248 12.2527 11.92 11.95L13.8 5.65C13.8234 5.57567 13.8291 5.4969 13.8166 5.41998C13.8042 5.34306 13.7739 5.27012 13.7282 5.20698C13.6826 5.14383 13.6228 5.09224 13.5537 5.0563C13.4845 5.02036 13.4079 5.00108 13.33 5V5ZM4.52003 5L4.88003 2.83C4.91949 2.65282 5.01104 2.4915 5.14291 2.36676C5.27477 2.24202 5.44093 2.15957 5.62003 2.13C5.86603 2.052 6.12203 2.009 6.38003 2H8.62003C8.88103 2.008 9.14003 2.051 9.39003 2.13C9.56912 2.15957 9.73528 2.24202 9.86715 2.36676C9.99901 2.4915 10.0906 2.65282 10.13 2.83L10.48 5H4.48003H4.52003Z" fill="white" />
+                            <input
+                                className="w-full outline-none appearance-none placeholder-gray-500 text-xs md:text-md text-gray-500 bg-transparent sm:w-auto"
+                                type="text"
+                                placeholder="Search"
+                            />
+                        </form>
+                        {renderThemeChanger()}
+                        <button
+                            className="outline-none text-txt-dark/70 dark:text-txt-light/70 block lg:hidden"
+                            onClick={() => setMenuState(!menuState)}
+                        >
+                            {
+                                menuState ? (
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                     </svg>
-                                    Shop
-                                </div>
-                            </Button>
-                        </li>
-                        <li>
-                            {renderThemeChanger()}
-                        </li>
-                    </ul>
-                    <div className="ml-auto lg:hidden">
-                        <Button type='button' buttonStyle='none'
-                            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                            callback={() => setIsMenuOpen(true)}>
-                            <svg className="w-5 text-txt-dark dark:text-txt-light" viewBox="0 0 24 24">
-                                <path
-                                    fill="currentColor"
-                                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                                />
-                                <path
-                                    fill="currentColor"
-                                    d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                                />
-                                <path
-                                    fill="currentColor"
-                                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                                />
-                            </svg>
-                        </Button>
-                        {isMenuOpen && (
-                            <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-background-light dark:bg-background-dark rounded shadow-sm">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div>
-                                            <Link
-                                                href="/"
-                                                aria-label="Company"
-                                                title="Company"
-                                                className="inline-flex items-center"
-                                            >
-                                                <div>
-
-                                                    <svg
-                                                        className="w-8 text-deep-purple-accent-400"
-                                                        viewBox="0 0 24 24"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        strokeLinecap="round"
-                                                        strokeMiterlimit="10"
-                                                        stroke="currentColor"
-                                                        fill="none"
-                                                    >
-                                                        <rect x="3" y="1" width="7" height="12" />
-                                                        <rect x="3" y="17" width="7" height="6" />
-                                                        <rect x="14" y="1" width="7" height="6" />
-                                                        <rect x="14" y="11" width="7" height="12" />
-                                                    </svg>
-                                                    <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                        Company
-                                                    </span>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                        <div>
-                                            <button
-                                                className="p-2 -mt-2 -mr-2 transition duration-300"
-                                                onClick={() => setIsMenuOpen(false)}>
-                                                <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-                                                    <path
-                                                        fill="currentColor"
-                                                        d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <nav className='z-50'>
-                                        <ul className="space-y-4">
-                                            <NavLink mobile={true} name='Home' href='/' dropDownLinks={[
-                                                { 'name': 'Angebot', 'href': '/#angebot' },
-                                                { 'name': 'partner', 'href': '/#partner' }
-                                            ]} />
-                                            <NavLink mobile={true} name='Link 2' href='/' dropDownLinks={[
-                                                { 'name': 'Angebot', 'href': '/#angebot' },
-                                                { 'name': 'partner', 'href': '/#partner' }
-                                            ]} />
-                                            <NavLink mobile={true} name='Link 3' href='/' dropDownLinks={[
-                                                { 'name': 'Angebot', 'href': '/#angebot' },
-                                                { 'name': 'partner', 'href': '/#partner' }
-                                            ]} />
-                                            <NavLink mobile={true} name='Link 4' href='/' dropDownLinks={[
-                                                { 'name': 'Angebot', 'href': '/#angebot' },
-                                                { 'name': 'partner', 'href': '/#partner' }
-                                            ]} />
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        )}
+                                ) : (
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                    </svg>
+                                )
+                            }
+                        </button>
                     </div>
                 </div>
             </div>
-        </div >
-    );
+        </nav>
+    )
 }
-
-export default Navbar

@@ -67,11 +67,6 @@ export default function Feature() {
                             stopped old Big Bear. I didn't even know we were calling him Big
                             Bear. We never had the chance to.
                         </p>
-                        <Button buttonStyle="none" type="button" className="h-max w-max text-primary hover:text-secondary transition-colors duration-900 font-bold">
-                            <div>
-                                mehr...
-                            </div>
-                        </Button>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -101,11 +96,6 @@ export default function Feature() {
                             triplefin gulper South American Lungfish mahi-mahi, butterflyfish
                             glass catfish soapfish ling gray mullet!
                         </p>
-                        <Button buttonStyle="none" type="button" className="h-max w-max text-primary hover:text-secondary transition-colors duration-900 font-bold">
-                            <div>
-                                mehr...
-                            </div>
-                        </Button>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -135,11 +125,6 @@ export default function Feature() {
                             Hercules Morse, as big as a horse and Mrs Falani were up to no
                             good with a bunch of crook pikelets.
                         </p>
-                        <Button buttonStyle="none" type="button" className="h-max w-max text-primary hover:text-secondary transition-colors duration-900 font-bold">
-                            <div>
-                                mehr...
-                            </div>
-                        </Button>
                     </div>
                 </div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -169,11 +154,6 @@ export default function Feature() {
                             synergy capacity building, white paper; silo, unprecedented
                             challenge B-corp problem-solvers.
                         </p>
-                        <Button buttonStyle="none" type="button" className="h-max w-max text-primary hover:text-secondary transition-colors duration-900 font-bold">
-                            <div>
-                                mehr...
-                            </div>
-                        </Button>
                     </div>
                 </div>
             </div>

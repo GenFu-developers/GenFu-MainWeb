@@ -12,7 +12,7 @@ interface Props {
 
 function Shop({ shopCategorys }: Props) {
     return (
-        <div className="bg-background-light dark:bg-background-dark">
+        <div className='background-light dark:background-dark'>
             <Navbar />
             <motion.div className="min-h-screen" initial="hidden" animate="visible" variants={{
                 hidden: {

@@ -16,7 +16,7 @@ function ShopItem({ shopItem, selectCallback }: Props) {
     }
 
     return (
-        <motion.div whileHover={{ scale: 1.025 }} className={`block rounded-lg shadow-lg bg-background-light dark:bg-background-dark text-txt-dark dark:text-txt-light w-96 h-full ${isSelected ? 'shadow-lg shadow-green-500' : ''}`}>
+        <motion.div whileHover={{ scale: 1.025 }} className={`block rounded-lg shadow-lg  text-txt-dark dark:text-txt-light w-96 h-full ${isSelected ? 'shadow-lg shadow-green-500' : ''}`}>
             <div className="p-6 border-b border-gray-300 dark:border-slate-700 text-center">
                 <p className="uppercase mb-4 text-sm">
                     <strong>{shopItem.name}</strong>

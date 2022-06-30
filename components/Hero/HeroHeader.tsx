@@ -1,11 +1,12 @@
 import Link from "next/link";
 import HeroHeaderText from "./HeroHeaderText";
 import Modal from '../Modals/index'
+import Button from "../Button";
 
 
 export default function Header() {
     return (
-        <div className="bg-primary bg-[url('https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_960_720.jpg')] bg-cover ">
+        <div className="bg-primary bg-[url('/hero-image.png')] bg-cover">
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                     <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
@@ -31,7 +32,7 @@ export default function Header() {
                                     <svg
                                         viewBox="0 0 52 24"
                                         fill="currentColor"
-                                        className="absolute top-0 -left-40 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 lg:block"
+                                        className="absolute -top-10 -left-64 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 lg:block"
                                     >
                                         <defs>
                                             <pattern
@@ -53,18 +54,16 @@ export default function Header() {
                                 </span>
                                 <HeroHeaderText />
                             </h2>
-                            <Modal buttonText="Analysegespräch" buttonStyle="primary" buttonClassName="relative mx-auto top-12">
-                                <div>
-                                    this is my fuucking test modal pls work !
-                                </div>
-                            </Modal>
+                            <Button buttonStyle="primary" type="link" href="/shop" className="mx-auto relative top-10">
+                                <span>Angebote</span>
+                            </Button>
                         </div>
                     </div>
                 </div>
                 {/* Benefits Showcase */}
                 <div className="relative px-4 sm:px-0 mt-20">
                     <div className="absolute inset-0  h-1/2" />
-                    <div className="relative grid mx-auto overflow-hidden bg-white dark:bg-background-dark divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
+                    <div className="relative grid mx-auto overflow-hidden bg-light-container dark:bg-dark-container divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
                         <div className="inline-block p-8 text-center">
                             <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
                                 <svg

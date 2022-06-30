@@ -9,7 +9,7 @@ import Button from '../Button';
 function ShopCategoryCard({ name, slug, description, mainImage }: ShopCategory) {
     return (
         <motion.div whileHover={{ scale: 1.025 }} className="">
-            <div className="w-96 bg-background-light dark:bg-background-dark shadow-xl rounded-lg">
+            <div className="w-96 bg-light-container dark:bg-dark-container shadow-xl rounded-lg">
                 <div className="card-body px-4 py-6 text-center flex flex-col gap-5">
                     <h2 className="text-2xl text-txt-dark dark:text-txt-light">{name}</h2>
                     <p className='text-txt-dark/60 dark:text-txt-light/60'>{description}</p>
