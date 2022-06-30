@@ -11,8 +11,6 @@ export default () => {
             theme === 'dark' ? setTheme('light') : setTheme('dark')
         }
         const currentTheme = theme === "system" ? systemTheme : theme;
-        console.log(currentTheme);
-
         function getThemeImage() {
             const translateString = '-translate-y-2 -translate-x-3'
             if (currentTheme === "dark") {
@@ -22,7 +20,6 @@ export default () => {
                     </svg>
                 )
             }
-
             else {
                 return (
                     <svg className={'w-6 h-6 ' + translateString} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => setTheme('dark')}>
