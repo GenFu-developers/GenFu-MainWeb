@@ -23,10 +23,10 @@ function HeroHeaderText() {
     const [activeTab, setActiveTab] = useState(tabs[0])
     const basicTextStyle = 'flex gap-2 items-center text-shadow-md-dark text-txt-light text-xl md:text-3xl lg:text-4xl cursor-pointer transition-colors duration-500'
     return (
-        <div className='flex flex-col items-center gap-3 scale-110 lg:scale-125 mx-auto'>
+        <div className='flex flex-col items-center gap-3 scale-110 lg:scale-125 mx-auto font-bold'>
             <div className='flex flex-col gap-1 md:gap-3'>
                 <div className='flex gap-1 md:gap-3'>
-                    <span className={`${basicTextStyle} ${activeTab.title === tabs[0].title ? 'text-secondary' : ''}`}
+                    <span className={`${basicTextStyle} ${activeTab.title === tabs[0].title ? ' text-secondary' : ''}`}
                         onClick={() => { setActiveTab(tabs[0]) }}>
                         {`${tabs[0].title} `}
                         <svg className='mt-px scale-75 lg:scale-100' width="20" height="21" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ function HeroHeaderText() {
                     onClick={() => { setActiveTab(tabs[3]) }}>
                     {tabs[3].title}</span>
             </div>
-            <p className="text-base px-2 text-center text-txt-light md:text-lg font-medium">
+            <p className="text-base px-2 text-center text-txt-light/70 md:text-md mb-5 font-medium">
                 {activeTab.value}
             </p>
         </div>

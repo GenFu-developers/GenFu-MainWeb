@@ -16,7 +16,7 @@ function Partner() {
                             Build a simply and powered collaborative space for all your team. Track, share, measure, you have a fully control, it&#x27;s never be simply and efficient.
                         </p>
                         <ul className="mt-8 md:grid md:grid-cols-2 gap-6">
-                            <li className="mt-6 lg:mt-0">
+                            <li key={0} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -29,7 +29,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={1} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -42,7 +42,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={2} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -55,7 +55,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={3} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -97,7 +97,7 @@ function Partner() {
                             Build a simply and powered collaborative space for all your team. Track, share, measure, you have a fully control, it&#x27;s never be simply and efficient.
                         </p>
                         <ul className="mt-8 md:grid md:grid-cols-2 gap-6">
-                            <li className="mt-6 lg:mt-0">
+                            <li key={0} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -110,7 +110,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={1} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -123,7 +123,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={2} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -136,7 +136,7 @@ function Partner() {
                                     </span>
                                 </div>
                             </li>
-                            <li className="mt-6 lg:mt-0">
+                            <li key={3} className="mt-6 lg:mt-0">
                                 <div className="flex">
                                     <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">

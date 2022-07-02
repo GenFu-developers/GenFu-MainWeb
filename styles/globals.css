@@ -4,13 +4,26 @@
 
 @layer base {
     .background-dark {
-        @apply bg-gradient-to-tr from-background-dark via-background-dark-2 to-background-dark-2 bg-fixed
+        @apply text-txt-light bg-gradient-to-tr from-background-dark via-background-dark-2 to-background-dark-2 bg-fixed
     }
     
     .background-light {
-        @apply bg-gradient-to-tr from-background-light-2 via-background-light to-background-light-2 bg-fixed
+        @apply text-txt-dark bg-gradient-to-tr from-background-light-2 via-background-light to-background-light-2 bg-fixed
+    }
+    :root {
+        --rdp-cell-size: 40px;
+        --rdp-accent-color: #0000ff;
+        --rdp-background-color: #e7edff;
+        /* Switch to dark colors for dark themes */
+        --rdp-accent-color-dark: #3003e1;
+        --rdp-background-color-dark: #180270;
+        /* Outline border for focused elements */
+        --rdp-outline: 2px solid var(--rdp-accent-color);
+        /* Outline border for focused and selected elements */
+        --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75);
     }
 }
+
 
 html {
     scroll-behavior: smooth;

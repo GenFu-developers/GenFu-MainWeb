@@ -5,24 +5,20 @@ export default function Product() {
                 <div className="flex flex-col justify-center">
                     <div className="max-w-xl mb-6">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-txt-light sm:text-4xl sm:leading-none">
-                            Der einzig wahre
-                            <br className="hidden md:block" />
-                            Lorem Ipsum{' '}
-                            <span className="inline-block text-primary">
-                                a lazy dog
-                            </span>
+                            Was macht uns aus?
                         </h2>
                         <p className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae. explicabo.
+                            Wir haben uns gegründet, um alte, moralische Werte zurück zu bringen.
+                            Die rede ist von Vertrauen, Leidenschaft und Liebe.
+                            <br />
+                            Was das für uns bedeutet siehst du --hier--. {'(leidenschaft liebe vertrauen erklärt)'}
                         </p>
                     </div>
                     <div className="grid gap-8 row-gap-8 sm:grid-cols-2">
                         <div>
                             <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                                 <svg
-                                    className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
+                                    className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light animate-pulse duration-1000"
                                     viewBox="0 0 52 52"
                                 >
                                     <polygon
@@ -35,11 +31,11 @@ export default function Product() {
                                 </svg>
                             </div>
                             <h6 className="mb-2 font-semibold leading-5 dark:text-txt-light">
-                                I'll be sure to note that in my log
+                                Unternehmenskultur
                             </h6>
                             <p className="text-sm text-gray-900 dark:text-txt-light/80">
-                                Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly got in a gaum
-                                Powrtland stove up dooryahd
+                                Die Bindung zu unseren Mitarbeitern, steht wie die Bindung zu unseren Kunden an erster Stelle.
+                                Deshalb liegen uns folgende Dinge am Herzen
                             </p>
                         </div>
                         <div>
@@ -58,11 +54,10 @@ export default function Product() {
                                 </svg>
                             </div>
                             <h6 className="mb-2 font-semibold leading-5 dark:text-txt-light">
-                                Iterative approaches to corporate strategy
+                                Kundenverhältnis
                             </h6>
                             <p className="text-sm text-gray-900 dark:text-txt-light/80">
-                                A slice of heaven. O for awesome, this chocka full cuzzie is as
-                                rip-off as a cracker.
+                                Kapitalismus ohne moralische Werte ist für uns nicht vorstellbar. Deshalb steht bei GenFu der Kunde und seine Bedürfnisse an erster Stelle.
                             </p>
                         </div>
                     </div>

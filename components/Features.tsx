@@ -34,12 +34,11 @@ export default function Feature() {
                                 height="24"
                             />
                         </svg>
-                        <span className="relative">Der</span>
-                    </span>{' '}
-                    einzige, wahre lorem ipsum della a lazy dog
+                        Tranzparenz - eine kostenlose Dienstleistung
+                    </span>
                 </h2>
                 <p className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum harum vero sapiente nemo possimus quibusdam. Lorem ipsum dolor sit amet.
+                    Hier bekommst du einen Einblick in unseren Businessplan. Tiefe Transparenz ist eine unserer kostenlosen Dienstleistungen.
                 </p>
             </div>
             <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
@@ -61,11 +60,9 @@ export default function Feature() {
                         </div>
                     </div>
                     <div>
-                        <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">The deep ocean</h6>
+                        <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">Die Idee</h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            A flower in my garden, a mystery in my panties. Heart attack never
-                            stopped old Big Bear. I didn't even know we were calling him Big
-                            Bear. We never had the chance to.
+                            Unsere Idee ist es, einzigartige und hochwertige Websites für Firmengründer, mittelständige Unternehmen oder Privatpersonen zu erstellen. Mit unseren individuellen Ansätzen beginnt deine Reise in die Digitalisierung.
                         </p>
                     </div>
                 </div>

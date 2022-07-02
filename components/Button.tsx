@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface Props {
     children: JSX.Element;
-    buttonStyle: 'outline' | 'primary' | 'secondary' | 'warning' | 'success' | 'none';
+    buttonStyle: 'outline' | 'primary' | 'secondary' | 'warning' | 'success' | 'none'
     type: 'link' | 'button';
     callback?: Function;
     href?: string;
@@ -24,7 +24,8 @@ function Button({ buttonStyle, callback, type, href, className, children, loadin
         none: basicStyle,
     }
     return (
-        <motion.div className={`${style[buttonStyle]} py-2 px-4 w-max cursor-pointer ${className ? className : ''}`} onClick={() => { if (callback) return callback() }}
+        <motion.div className={`${style[buttonStyle]} py-2 px-4 w-max cursor-pointer ${className ? className : ''}`}
+            onClick={() => { if (callback) return callback() }}
             whileTap={{ scale: .9 }} whileHover={{ scale: 1.025, filter: 'brightness(110%)' }}>
             {type == 'button' ?
                 /* type === Button */

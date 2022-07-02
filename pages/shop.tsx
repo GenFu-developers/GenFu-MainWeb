@@ -5,6 +5,7 @@ import { ShopCategory } from '../typings'
 import ShopCategoryCard from '../components/Shop/ShopCategoryCard'
 import { motion } from 'framer-motion'
 import Footer from '../components/Footer'
+import ShopNavbar from '../components/Shop/ShopNavbar'
 
 interface Props {
     shopCategorys: [ShopCategory]
@@ -13,7 +14,8 @@ interface Props {
 function Shop({ shopCategorys }: Props) {
     return (
         <div className='background-light dark:background-dark'>
-            <Navbar />
+            <Navbar shadow={false} />
+            <ShopNavbar path={[{ title: 'Kategorien', href: '/shop' }]} />
             <motion.div className="min-h-screen" initial="hidden" animate="visible" variants={{
                 hidden: {
                     scale: .8,

@@ -42,7 +42,25 @@ export default {
             name: 'productContent',
             title: 'Produkt Inhalt',
             type: 'array',
-            of: [{ type: 'string' }],
+            of: [
+                {
+                    name: 'content',
+                    title: 'Inhalt',
+                    type: 'object',
+                    fields: [
+                        {
+                            title: 'text',
+                            name: 'text',
+                            type: 'string'
+                        },
+                        {
+                            title: 'Tooltip',
+                            name: 'tooltip',
+                            type: 'string'
+                        }
+                    ]
+                }
+            ],
 
         },
         {

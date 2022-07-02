@@ -44,5 +44,35 @@ export interface ShopItem {
     };
     mainImage: string;
     priceInterval: string;
-    productContent: Array;
+    productContent: {
+        text: string;
+        tooltip: string;
+    }[];
+}
+
+export interface Alert {
+    name: string;
+    text: string;
+    color?: {
+        _type: 'color';
+        alpha: number;
+        hex: string;
+        hsl: {
+            _type: string;
+            a: number;
+            h: number;
+            l: number;
+            s: number;
+        },
+        hsv: {
+            _type: string,
+            a: number;
+            h: number;
+            s: number;
+            v: number;
+        },
+        rgb: { _type: string, a: number, b: number, g: number, r: number }
+    },
+    link?: string;
+    linkText?: string;
 }

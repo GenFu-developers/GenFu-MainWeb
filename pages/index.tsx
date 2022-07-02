@@ -2,24 +2,29 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 // custom components
 import Navbar from '../components/Navbar'
-import Header from '../components/Hero/HeroHeader'
+import Hero from '../components/Hero/HeroHeader'
 import Features from '../components/Features'
-import Product from '../components/Product'
+import Product from '../components/Sections/WasMachtUnsAus'
 import Steps from '../components/Steps'
 import Footer from '../components/Footer'
 import Team from '../components/Team'
 import Partner from '../components/Partner'
+import { sanityClient } from '../sanity'
+import { Alert } from '../typings'
 
-export default function Home() {
+interface Props {
+  alert: Alert
+}
 
+export default function Home({ alert }: Props) {
   return (
-    <div className='background-light dark:background-dark'>
+    <div className='background-light dark:background-dark overflow-x-hidden'>
       < Head >
         <title>GenFu Webservice</title>
         <link rel="icon" href="/favicon.ico" />
       </Head >
       <Navbar />
-      <Header />
+      <Hero alert={alert} />
       <Product />
       <Partner />
       <Features />
@@ -28,4 +33,23 @@ export default function Home() {
       <Footer />
     </div >
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == "landing-page-alert" && aktiv == true][0]{
+     name,
+     text,
+     color,
+     link,
+     linkText,
+    }`;
+
+  const alert = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      alert: alert,
+    }
+  }
 }
