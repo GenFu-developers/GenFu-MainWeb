@@ -28,7 +28,7 @@ interface Props {
     children: JSX.Element;
     handleClose: MouseEventHandler;
     modalOpen: boolean;
-    className: string;
+    className?: string;
 }
 
 const Modal = ({ handleClose, children, className }: Props) => {
