@@ -46,7 +46,7 @@ export default function Feature() {
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
+                                className="animate-pulse duration-1000 w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -70,7 +70,7 @@ export default function Feature() {
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
+                                className="animate-pulse duration-1000 w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -99,7 +99,7 @@ export default function Feature() {
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
+                                className="animate-pulse duration-1000 w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon
@@ -128,7 +128,7 @@ export default function Feature() {
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
-                                className="w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
+                                className="animate-pulse duration-1000 w-10 h-10 stroke-txt-dark dark:stroke-txt-light"
                                 viewBox="0 0 52 52"
                             >
                                 <polygon

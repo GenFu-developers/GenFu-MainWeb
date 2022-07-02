@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero/HeroHeader'
 import Features from '../components/Features'
-import Product from '../components/Sections/WasMachtUnsAus'
+import WMUASection from '../components/Sections/WasMachtUnsAus'
 import Steps from '../components/Steps'
 import Footer from '../components/Footer'
 import Team from '../components/Team'
@@ -25,7 +25,7 @@ export default function Home({ alert }: Props) {
       </Head >
       <Navbar />
       <Hero alert={alert} />
-      <Product />
+      <WMUASection />
       <Partner />
       <Features />
       <Steps />
