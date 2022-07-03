@@ -11,7 +11,7 @@ const alertBackground = 'bg-[#0058ab]'
 function LandingPageAlert({ alert }: Props) {
     // !alert.color?.hex ? alertColor = '#0058ab' : alertColor = alert.color.hex
     if (alert) return (
-        < AlertComponent closeBtnColor='white' containerClassList={`z-50 ${alertBackground} translate-y-20`} >
+        < AlertComponent closeBtnColor='white' containerClassList={`z-40 ${alertBackground} absolute top-20 `} >
             <div className='flex items-center gap-2 md:gap-5 flex-col md:flex-row'>
                 <span className='text-txt-light'>
                     {alert.text}

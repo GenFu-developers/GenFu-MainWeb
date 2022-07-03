@@ -36,7 +36,7 @@ const Modal = ({ handleClose, children, className }: Props) => {
         <Backdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className={`z-50 relative overflow-auto bg-light-container dark:bg-dark-container text-txt-dark dark:text-txt-light mx-auto py-8 rounded-lg w-full max-w-4xl  max-h-max`}
+                className={`z-50 relative overflow-auto bg-light-container dark:bg-dark-container text-txt-dark dark:text-txt-light mx-auto py-8 rounded-lg w-full max-w-4xl  max-h-3/4`}
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"

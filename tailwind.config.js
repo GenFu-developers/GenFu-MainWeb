@@ -22,8 +22,11 @@ module.exports = {
                 'txt-dark': '#000000',
             },
             height: {
-                '80vh': '80vh'
+                '80vh': '80vh',
             },
+            maxHeight: {
+                '3/4': '75vh',
+            }
 
         },
     },

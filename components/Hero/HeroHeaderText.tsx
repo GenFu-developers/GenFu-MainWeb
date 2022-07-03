@@ -5,11 +5,11 @@ function HeroHeaderText() {
     const tabs = [
         {
             'title': 'Vision',
-            'value': '2 ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, consequuntur, minus quas voluptates at consectetur.'
+            'value': `Wir haben uns entschieden neue Wege zu gehen. Lies unser Whitepaper und überzeuge dich selbst. GenFu ist nicht nur ein Dienstleister.Nein.GenFu ist eine Plattform für alle Menschen, die Innovation leben.`
         },
         {
             'title': 'Qualität',
-            'value': '1 ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, consequuntur, minus quas voluptates at consectetur.'
+            'value': `Qualität vor Quantität. Unsere Kunden haben Vorrang, nicht die Gewinne von GenFu. Bei uns steht jeder Kunde im Vordergrund, nicht unsere Dienstleistung.`
         },
         {
             'title': 'Service',

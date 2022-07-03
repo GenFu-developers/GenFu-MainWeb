@@ -13,8 +13,10 @@ interface Props {
 }
 
 export default function Header({ alert }: Props) {
+    console.log(alert);
+
     return (
-        <div>
+        <div className="pt-20">
             <AlertComponent alert={alert} />
             {/* <img className="absolute w-full h-full left-0 top-0 hero-clip-path" src="/hero-image.png" alt="" /> */}
 
@@ -59,7 +61,7 @@ export default function Header({ alert }: Props) {
                                     <span>Angebote</span>
                                 </Button>
                             </div>
-                            <img className="w-1/2 z-50 hidden lg:block" src="/hero-illustration.svg" />
+                            <img className="w-full max-h-72  z-50 hidden lg:block" src="/hero-illustration.svg" />
                         </div>
                     </section>
                     {/* Benefits Showcase */}
