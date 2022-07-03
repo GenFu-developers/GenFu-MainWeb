@@ -1,6 +1,6 @@
 import React from 'react'
 import Roadmap from '../components/Roadmap/index'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 import Footer from '../components/Footer'
 
 function roadmap() {

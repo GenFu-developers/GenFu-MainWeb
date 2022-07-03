@@ -16,7 +16,11 @@ export default function Header({ alert }: Props) {
     return (
         <div>
             <AlertComponent alert={alert} />
-            <div className="bg-primary bg-[url('/hero-image.png')] bg-cover h-screen">
+            {/* <img className="absolute w-full h-full left-0 top-0 hero-clip-path" src="/hero-image.png" alt="" /> */}
+
+            <img className=" z-0 absolute w-full h-full left-0 top-0 hero-clip-path brightness-50" src="https://cdn.pixabay.com/photo/2022/06/29/06/37/data-7291059_960_720.jpg" alt="" />
+            {/*  */}
+            <div className="h-screen">
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                         <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
@@ -40,12 +44,24 @@ export default function Header({ alert }: Props) {
                                 <h2 className="max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto -mt-14">
                                     <HeroHeaderText />
                                 </h2>
-                                <Button buttonStyle="primary" type="link" href="/shop" className="mx-auto relative top-10">
-                                    <span>Angebote</span>
+                                <Button buttonStyle="primary" type="link" href="/#überUns" className="mx-auto relative top-10 px-20">
+                                    <span>Über Uns</span>
                                 </Button>
                             </div>
                         </div>
                     </div>
+                    <section className="">
+                        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl flex sm:py-16 lg:px-6">
+                            <div className="mt-4  z-50">
+                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Let's create more tools and ideas that brings us together.</h2>
+                                <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+                                <Button type="link" buttonStyle="success">
+                                    <span>Angebote</span>
+                                </Button>
+                            </div>
+                            <img className="w-full z-50 hidden md:block" src="/hero-illustration.svg" />
+                        </div>
+                    </section>
                     {/* Benefits Showcase */}
 
                 </div>

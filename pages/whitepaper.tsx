@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 import Sidebar from '../components/Whitepaper/sidebar'
 function whitepaper() {
     return (

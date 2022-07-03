@@ -8,7 +8,7 @@ import Modal from '../../components/Modals/index';
 import Footer from '../../components/Footer';
 import Termin from '../../components/Termin/index'
 import ShopNavbar from '../../components/Shop/ShopNavbar'
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Menu/Navbar'
 
 
 interface Props {

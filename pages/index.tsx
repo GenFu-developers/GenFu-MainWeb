@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 // custom components
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 import Hero from '../components/Hero/HeroHeader'
 import Features from '../components/Features'
 import WMUASection from '../components/Sections/WasMachtUnsAus'

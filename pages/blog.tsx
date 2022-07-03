@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 import BlogList from '../components/Blog/BlogList'
 /* Sanity imports */
 import { sanityClient, urlFor } from '../sanity'

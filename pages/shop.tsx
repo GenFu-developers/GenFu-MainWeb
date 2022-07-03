@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 import { sanityClient } from '../sanity'
 import { ShopCategory } from '../typings'
 import ShopCategoryCard from '../components/Shop/ShopCategoryCard'

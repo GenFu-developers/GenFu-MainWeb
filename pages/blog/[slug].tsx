@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import React from 'react'
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Menu/Navbar';
 import { sanityClient, urlFor } from '../../sanity';
 import { Post } from '../../typings';
 

@@ -12,6 +12,7 @@ import author from './author'
 import shopCategory from './shopCategory'
 import shopItem from './shopItem'
 import landingPageAlert from './landingPageAlert'
+import WebserviceOrder from './WebserviceOrder'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +26,7 @@ export default createSchema({
     shopCategory,
     shopItem,
     landingPageAlert,
+    WebserviceOrder,
     post,
     author,
     category,

@@ -1,7 +1,7 @@
 import React from 'react'
 import Feedback from '../components/Feedback/index'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Menu/Navbar'
 
 function feedback() {
     return (

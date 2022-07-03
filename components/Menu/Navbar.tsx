@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import Button from "./Button";
+import Button from "../Button";
 import { motion } from "framer-motion";
+import MenuButton from './MenuButton'
 
 interface Props {
     shadow?: boolean
@@ -91,14 +92,7 @@ export default ({ shadow }: Props) => {
                 <Button buttonStyle="none" className="h-10 mx-auto" type="link" href="/">
                     <img src="GenFuLogo-white.png" className="h-10 scale-125 relative -top-2" alt="" />
                 </Button>
-                {/* <Button type="link" href="/" buttonStyle="none"
-                    className="flex md:hidden lg:flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-                </Button> */}
-                <motion.svg whileTap={{ scale: .85, skewX: '-8deg' }} whileHover={{ skewX: '8deg' }}
-                    className={`block md:hidden cursor-pointe fill-dark-container dark:fill-light-container relative -top-2`} width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onClick={() => { setMenuState(menuState ? false : true) }}>
-                    <path d="M21 18H12V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="" />
-                </motion.svg>
+                <MenuButton callback={() => { setMenuState(!menuState) }} className="block md:hidden" />
                 <div className="w-2/5  hidden md:flex gap-5 lg:justify-end ml-5 lg:ml-0 ">
                     {navigation.buttons.map((navItem) => (
                         <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
