@@ -23,7 +23,7 @@ export default function Header({ alert }: Props) {
             <div className="h-screen">
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
-                        <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
+                        <div className="flex flex-col sm:text-center sm:mb-0">
                             <a href="/" className="mb-6 sm:mx-auto">
                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
                                     <svg
@@ -40,7 +40,7 @@ export default function Header({ alert }: Props) {
                                     </svg>
                                 </div>
                             </a>
-                            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 mt-16">
+                            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl">
                                 <h2 className="max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto -mt-14">
                                     <HeroHeaderText />
                                 </h2>
@@ -52,14 +52,14 @@ export default function Header({ alert }: Props) {
                     </div>
                     <section className="">
                         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl flex sm:py-16 lg:px-6">
-                            <div className="mt-4  z-50">
-                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Let's create more tools and ideas that brings us together.</h2>
-                                <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+                            <div className=" z-50">
+                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-shadow-md-dark  text-txt-light">Let's create more tools and ideas that brings us together.</h2>
+                                <p className="mb-6 font-light text-txt-dark md:text-lg dark:text-txt-light text-shadow-md-dark bg-neutral-200 dark:bg-slate-700 px-5 py-4 rounded-md border-l-8 border-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ipsum, dolores velit nihil fuga consectetur rerum illum debitis distinctio perspiciatis beatae aliquam error laudantium laborum natus similique exercitationem! Quas, totam.</p>
                                 <Button type="link" buttonStyle="success">
                                     <span>Angebote</span>
                                 </Button>
                             </div>
-                            <img className="w-full z-50 hidden md:block" src="/hero-illustration.svg" />
+                            <img className="w-1/2 z-50 hidden lg:block" src="/hero-illustration.svg" />
                         </div>
                     </section>
                     {/* Benefits Showcase */}
