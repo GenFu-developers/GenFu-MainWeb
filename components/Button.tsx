@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link';
 
 interface Props {
-    children: JSX.Element;
+    children?: JSX.Element;
     buttonStyle: 'outline' | 'primary' | 'secondary' | 'warning' | 'success' | 'none'
     type: 'link' | 'button';
     callback?: Function;
@@ -16,7 +16,7 @@ function Button({ buttonStyle, callback, type, href, className, children, loadin
     const [isLoading, setIsLoading] = useState(false);
     const basicStyle = 'rounded-md text-white '
     const style = {
-        outline: basicStyle + 'border-2',
+        outline: basicStyle + 'border-2 text-txt-dark dark:text-txt-light',
         primary: basicStyle + 'bg-primary',
         secondary: basicStyle + 'bg-secondary',
         warning: basicStyle + 'bg-red-500',
@@ -29,10 +29,10 @@ function Button({ buttonStyle, callback, type, href, className, children, loadin
             whileTap={{ scale: .9 }} whileHover={{ scale: 1.025, filter: 'brightness(110%)' }}>
             {type == 'button' ?
                 /* type === Button */
-                <div>{children}</div>
+                <div>{children ? children : null}</div>
                 :
                 /* type === Link */
-                <Link href={href ? href : '/'}>{<div>{children}</div>}</Link>
+                <Link href={href ? href : '/'}>{<div>{children ? children : null}</div>}</Link>
             }
         </ motion.div>
     )

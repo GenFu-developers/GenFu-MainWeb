@@ -1,19 +1,22 @@
 import { motion } from "framer-motion"
+import Button from "./Button"
+import LogoSVGCircle from './LogoSVG/circle'
 
 export default () => {
     const NavItems: { name: string, href: string }[] = [
         { name: "Datenschutz", href: "/" },
         { name: "AGB`S", href: "/" },
-        { name: "Vorgang", href: "/" },
-        { name: "Über uns", href: "/" },
-        { name: "Angebote", href: "/" },
+        { name: "Impressum", href: "/impressum" },
     ]
 
     return (
         <footer className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-10">
             <div className="max-w-lg sm:mx-auto sm:text-center">
-                {/* <img src="https://www.floatui.com/logo.svg" className="w-32 sm:mx-auto" /> */}
-                <span className="text-3xl font-black text-txt-dark dark:text-txt-light">GenFu</span>
+                {/* <img src="/GenFu-Logo-Circle.svg" className="w-32 sm:mx-auto" /> */}
+                <Button type="link" buttonStyle="none" href="/" className="mx-auto">
+                    <LogoSVGCircle />
+                </Button>
+
 
                 <p className="leading-relaxed mt-2 text-[15px]">
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -23,9 +26,11 @@ export default () => {
                 {
                     NavItems.map((item: { name: string, href: string }, idx: number) => (
                         <li className=" text-txt-dark/70 dark:text-txt-light/70  hover:text-gray-900">
-                            <a key={idx} href={item.href}>
-                                {item.name}
-                            </a>
+                            <Button type="link" buttonStyle="none" key={idx} href={item.href}>
+                                <span className="text-txt-dark/60 dark:text-txt-light/60">
+                                    {item.name}
+                                </span>
+                            </Button>
                         </li>
                     ))
                 }

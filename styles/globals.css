@@ -13,9 +13,52 @@
     .hero-clip-path {
         clip-path: polygon(0% 0%, 100% 0%, 100% 56.8%, 0% 78.3%);
     }
+    .hero-clip-path-sm {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 81%, 0% 100%); 
+        clip-path: polygon(0 0, 100% 0%, 100% 81%, 0% 100%);
+    }
+
+    .slide-in-animation {
+        animation-duration: 300ms;
+        animation-name: slidein;
+        overflow: hidden;
+    }
+    .slide-out-animation {
+        animation-duration: 300ms;
+        animation-name: slideout;
+        overflow: hidden;
+
+    }
 }
 
-  
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+
+}
+}
+
+
+@keyframes slideout{
+  from {
+    margin-left: 0;
+    width: 100%;
+
+  }
+
+  to {
+    margin-left: -100%;
+    width: 300%;
+  }
+}
+
 
 
 html {

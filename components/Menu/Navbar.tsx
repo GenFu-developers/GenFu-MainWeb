@@ -40,8 +40,8 @@ const mobileNavVariants = {
 
 export default ({ shadow }: Props) => {
     const router = useRouter()
+    const { systemTheme, theme, setTheme } = useTheme();
     const renderThemeChanger = () => {
-        const { systemTheme, theme, setTheme } = useTheme();
         const switchTheme = () => {
             theme === 'dark' ? setTheme('light') : setTheme('dark')
         }
@@ -80,7 +80,7 @@ export default ({ shadow }: Props) => {
     );
     if (shadow === undefined) shadow = true
     return (
-        <header className={`z-50 w-full top-0 max-h-20  fixed bg-light-container dark:bg-dark-container text-txt-dark dark:text-txt-light ${shadow ? 'shadow-lg' : ''}`}>
+        <header className={`z-50 w-full top-0 max-h-20 fixed  bg-light-container dark:bg-dark-container text-txt-dark dark:text-txt-light ${shadow ? 'shadow-lg' : ''}`}>
             <div className="container mx-auto flex p-5 justify-between md:justify-center   md:flex-row items-center ">
                 <nav className="gap-5 hidden md:flex  items-center text-base md:ml-auto">
                     {navigation.links.map((item, idx) => (
@@ -89,8 +89,9 @@ export default ({ shadow }: Props) => {
                         </Button>
                     ))}
                 </nav>
-                <Button buttonStyle="none" className="h-10 mx-auto" type="link" href="/">
-                    <img src="GenFuLogo-white.png" className="h-10 scale-125 relative -top-2" alt="" />
+                <Button buttonStyle="none" className="my-auto h-10 mx-auto" type="link" href="/">
+                    <img src={theme === 'dark' ? 'GenFu-Logo-darkmode.svg' : 'GenFu-Logo.svg'} className="h-9 scale-125 relative -top-2" alt="" />
+
                 </Button>
                 <MenuButton callback={() => { setMenuState(!menuState) }} className="block md:hidden" />
                 <div className="w-2/5  hidden md:flex gap-5 lg:justify-end ml-5 lg:ml-0 ">
@@ -106,7 +107,7 @@ export default ({ shadow }: Props) => {
                 {/* mobile menu */}
                 {menuState &&
                     <motion.div initial="initial" animate="enter" variants={mobileNavVariants}
-                        className="z-50 absolute pt-5 md:hidden left-0 flex flex-col items-center top-20 w-full pb-5 bg-background-light dark:bg-dark-container shadow-lg">
+                        className="z-50  pt-5 md:hidden absolute left-0 flex flex-col items-center top-20 w-full pb-5 bg-background-light dark:bg-dark-container shadow-lg">
                         <div className="flex gap-5">
                             {navigation.buttons.map((navItem) => (
                                 <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>

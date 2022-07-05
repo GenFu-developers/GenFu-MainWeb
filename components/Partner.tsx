@@ -1,9 +1,14 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import AnImage from './AnImage/index'
+const imgHoverStyle = {
+    scale: 1.115
+}
 
 function Partner() {
     return (
         <div className="max-w-screen-xl p-4 mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20 flex flex-col gap-12" id="partner">
-            <div className="relative">
+            <div className="order-last">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                     <div className="lg:col-start-2 lg:max-w-2xl ml-auto">
                         <p className="text-base leading-6 text-primary font-semibold uppercase">
@@ -70,21 +75,21 @@ function Partner() {
                             </li>
                         </ul>
                     </div>
-                    <div className="mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1">
-                        <div className="relative space-y-4">
+                    <div className="mt-10 lg:-mx-4  lg:mt-0 lg:col-start-1">
+                        <div className=" space-y-4">
                             <div className="flex items-end justify-center lg:justify-start space-x-4">
-                                <img className="rounded-lg shadow-lg w-32 md:w-56" width="200" src="https://cdn.pixabay.com/photo/2022/06/23/09/46/mountain-7279430_960_720.jpg" alt="1" />
-                                <img className="rounded-lg shadow-lg w-40 md:w-64" width="260" src="https://cdn.pixabay.com/photo/2022/03/01/00/12/tree-7040298_960_720.jpg" alt="2" />
+                                <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/06/23/09/46/mountain-7279430_960_720.jpg" alt="1" />
+                                <AnImage className="w-40 md:w-64" src="https://cdn.pixabay.com/photo/2022/03/01/00/12/tree-7040298_960_720.jpg" alt="2" />
                             </div>
                             <div className="flex items-start justify-center lg:justify-start space-x-4 ml-12">
-                                <img className="rounded-lg shadow-lg w-24 md:w-40" width="170" src="https://cdn.pixabay.com/photo/2022/06/03/03/50/beach-7239311_960_720.jpg" alt="3" />
-                                <img className="rounded-lg shadow-lg w-32 md:w-56" width="200" src="https://cdn.pixabay.com/photo/2022/02/25/04/11/traffic-7033509_960_720.jpg" alt="4" />
+                                <AnImage className="w-24 md:w-40" src="https://cdn.pixabay.com/photo/2022/06/03/03/50/beach-7239311_960_720.jpg" alt="3" />
+                                <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/02/25/04/11/traffic-7033509_960_720.jpg" alt="4" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="relative">
+            <div className="">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                     <div className="lg:max-w-2xl ml-auto">
                         <p className="text-base leading-6 text-primary font-semibold uppercase">
@@ -151,15 +156,15 @@ function Partner() {
                             </li>
                         </ul>
                     </div>
-                    <div className="mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-2">
-                        <div className="relative space-y-4">
+                    <div className="mt-10 lg:-mx-4 lg:mt-0 lg:col-start-2">
+                        <div className="space-y-4">
                             <div className="flex items-end justify-center lg:justify-start space-x-4">
-                                <img className="rounded-lg shadow-lg w-32 md:w-56" width="200" src="https://cdn.pixabay.com/photo/2022/06/23/09/46/mountain-7279430_960_720.jpg" alt="1" />
-                                <img className="rounded-lg shadow-lg w-40 md:w-64" width="260" src="https://cdn.pixabay.com/photo/2022/03/01/00/12/tree-7040298_960_720.jpg" alt="2" />
+                                <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/06/23/09/46/mountain-7279430_960_720.jpg" alt="1" />
+                                <AnImage className="w-40 md:w-64" src="https://cdn.pixabay.com/photo/2022/03/01/00/12/tree-7040298_960_720.jpg" alt="2" />
                             </div>
                             <div className="flex items-start justify-center lg:justify-start space-x-4 ml-12">
-                                <img className="rounded-lg shadow-lg w-24 md:w-40" width="170" src="https://cdn.pixabay.com/photo/2022/06/03/03/50/beach-7239311_960_720.jpg" alt="3" />
-                                <img className="rounded-lg shadow-lg w-32 md:w-56" width="200" src="https://cdn.pixabay.com/photo/2022/02/25/04/11/traffic-7033509_960_720.jpg" alt="4" />
+                                <AnImage className="w-24 md:w-40" src="https://cdn.pixabay.com/photo/2022/06/03/03/50/beach-7239311_960_720.jpg" alt="3" />
+                                <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/02/25/04/11/traffic-7033509_960_720.jpg" alt="4" />
                             </div>
                         </div>
                     </div>

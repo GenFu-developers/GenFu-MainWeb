@@ -11,7 +11,7 @@ export default function Team() {
                 </p>
                 <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
                     <motion.div whileHover={{ scale: 1.015 }}
-                        className="px-12 py-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                        className="px-12 py-12 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
                         <div className="flex flex-col sm:-mx-4 sm:flex-row">
                             <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
 
@@ -21,7 +21,8 @@ export default function Team() {
                             </div>
                         </div>
                         <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
-                        <div className="flex mt-4 -mx-2">
+                        {/* socials */}
+                        {/* <div className="flex mt-4 -mx-2">
                             <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -49,12 +50,12 @@ export default function Team() {
                                     </path>
                                 </svg>
                             </a>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     <motion.div whileHover={{ scale: 1.015 }}
 
-                        className="px-12 py-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                        className="px-12 py-12 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
                         <div className="flex flex-col sm:-mx-4 sm:flex-row">
                             <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
 
@@ -65,7 +66,8 @@ export default function Team() {
                             </div>
                         </div>
                         <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
-                        <div className="flex mt-4 -mx-2">
+                        {/* socials */}
+                        {/* <div className="flex mt-4 -mx-2">
                             <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +93,7 @@ export default function Team() {
                                     </path>
                                 </svg>
                             </a>
-                        </div>
+                        </div> */}
                     </motion.div>
                 </div>
             </div>
