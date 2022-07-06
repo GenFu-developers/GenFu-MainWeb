@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import Button from "./Button"
 import LogoSVGCircle from './LogoSVG/circle'
-import { footerTextAnimations, footerLogoAnimations } from './Framer/animations'
+import { footerTextAnimations, plopAnimation } from './Framer/animations'
 import { useScroll } from './Framer/useScroll'
 
 export default () => {
@@ -13,11 +13,13 @@ export default () => {
     const [element, controls] = useScroll();
 
     return (
+        // @ts-ignore
         <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-10 h-[80vh] flex flex-col-reverse ">
-            <div className="max-w-lg sm:mx-auto sm:text-center order-last">
+            <div className="max-w-lg sm:mx-auto sm:text-center order-last  ">
                 {/* <img src="/GenFu-Logo-Circle.svg" className="w-32 sm:mx-auto" /> */}
+                {/*  @ts-ignore */}
                 <motion.div animate={controls}
-                    variants={footerLogoAnimations}
+                    variants={plopAnimation}
                     transition={{
                         delay: 0.02,
                         type: "tween",
@@ -27,8 +29,8 @@ export default () => {
                         <LogoSVGCircle />
                     </Button>
                 </motion.div>
-
-
+                {/* contact form */}
+                {/*  @ts-ignore */}
                 <motion.p animate={controls}
                     variants={footerTextAnimations}
                     transition={{
@@ -40,6 +42,7 @@ export default () => {
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </motion.p>
             </div>
+            {/*  @ts-ignore */}
             <motion.ul animate={controls}
                 variants={footerTextAnimations}
                 transition={{
@@ -60,9 +63,10 @@ export default () => {
                     ))
                 }
             </motion.ul>
+
             <div className="mt-8 items-center justify-between sm:flex">
-                <motion.span
-                    animate={controls}
+                {/*  @ts-ignore */}
+                <motion.span animate={controls}
                     variants={footerTextAnimations}
                     transition={{
                         delay: 0.02,
@@ -73,7 +77,8 @@ export default () => {
                     &copy; 2022 GenFu Webservices
                 </motion.span>
                 <div className="mt-6 sm:mt-0">
-                    <motion.ul animate={controls}
+                    {/*  @ts-ignore */}
+                    {/* <motion.ul animate={controls}
                         variants={footerLogoAnimations}
                         transition={{
                             delay: 0.02,
@@ -111,7 +116,7 @@ export default () => {
                                 </svg>
                             </motion.div>
                         </li>
-                    </motion.ul>
+                    </motion.ul> */}
                 </div>
             </div>
             <style jsx>{`

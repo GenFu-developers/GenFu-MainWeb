@@ -63,7 +63,12 @@ export const footerTextAnimations = {
   show: { x: 1, opacity: 1 },
 };
 
-export const footerLogoAnimations = {
+export const plopAnimation = {
   hidden: { scale: 0, opacity: 0 },
   show: { scale: 1, opacity: 1 },
 };
+
+export const boxAnimation = {
+  hidden: { scale: 0, opacity: 0, y: 400 },
+  show: { scale: 1, opacity: 1, y: 0 },
+}

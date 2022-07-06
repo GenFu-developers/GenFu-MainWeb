@@ -60,9 +60,9 @@ export default function Feature() {
                         </div>
                     </div>
                     <div>
-                        <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">Die Idee</h6>
+                        <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">Geschäftsidee</h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            Unsere Idee ist es, einzigartige und hochwertige Websites für Firmengründer, mittelständige Unternehmen oder Privatpersonen zu erstellen. Mit unseren individuellen Ansätzen beginnt deine Reise in die Digitalisierung.
+                            Unsere Idee ist es, Brücken für Firmengründer, mittelständige Unternehmen und Privatpersonen zu bauen. Mit unseren individuellen Ansätzen beginnt deine Reise in die Digitalisierung.
                         </p>
                     </div>
                 </div>
@@ -114,13 +114,10 @@ export default function Feature() {
                     </div>
                     <div>
                         <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">
-                            Organically grow
+                            Organisches Wachstum
                         </h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            A slice of heaven. O for awesome, this chocka full cuzzie is as
-                            rip-off as a cracker. Meanwhile, in behind the bicycle shed,
-                            Hercules Morse, as big as a horse and Mrs Falani were up to no
-                            good with a bunch of crook pikelets.
+                            Unser Denken ist und war schon immer langfristig. Aus diesem Grunde, gehen wir gerne doppelte Wege und fokussieren uns darauf aus unseren Schwächen und Fehlern die wir machen und noch machen werden, zu lernen.
                         </p>
                     </div>
                 </div>

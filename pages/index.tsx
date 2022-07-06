@@ -27,12 +27,14 @@ export default function Home({ alert }: Props) {
       <AlertComponent alert={alert} />
       <Navbar />
       <Hero />
-      <WMUASection />
-      <Partner />
-      <Features />
-      <Steps />
-      <Team />
-      <Footer />
+      <div className="mt-24 pt-96">
+        <WMUASection />
+        <Partner />
+        <Features />
+        <Steps />
+        <Team />
+        <Footer />
+      </div>
 
     </div >
   )

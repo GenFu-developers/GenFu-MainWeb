@@ -13,6 +13,7 @@ interface Props {
 
 const imgHoverStyle = {
     scale: 1.115,
+    transition: { duration: .2 }
 }
 
 const galleryStyle = `absolute w-full h-full`
@@ -34,28 +35,19 @@ function index({ src, className, alt }: Props) {
                 }}
                 viewport={{ once: true }}
                 whileHover={imgHoverStyle} alt={`${alt}`}
-                whileTap={{ scale: 0.9 }}
-                className={`rounded-lg object-cover shadow-lg ${className} ${isGallery ? galleryStyle : ''}`}
+                whileTap={{ scale: 0.9, transition: { duration: .3 } }}
+                className={`cursor-pointer rounded-lg object-cover shadow-lg ${className} ${isGallery ? galleryStyle : ''}`}
                 src={src}
-                onClick={() => { setIsGallery(!isGallery) }}
-            /> :
+                onClick={() => { setIsGallery(!isGallery) }} /> :
 
             <Backdrop onClick={() => { setIsGallery(false) }}>
-                <motion.img variants={portfolioAnimation}
-                    // @ts-ignore
-                    animate={controls}
-                    transition={{
-                        delay: 0.03,
-                        type: "tween",
-                        duration: 0.8,
-                    }}
-                    viewport={{ once: true }}
+                <motion.img
                     // whileTap={{ scale: 0.9 }}
-                    className={`w-10/12 mx-auto h-4/6 rounded-lg object-cover`}
+                    className={`cursor-pointer w-10/12 mx-auto h-4/6 rounded-lg object-cover`}
                     src={src}
                     onClick={() => { setIsGallery(!isGallery) }}
                 />
-            </Backdrop>
+            </Backdrop >
     )
 }
 
