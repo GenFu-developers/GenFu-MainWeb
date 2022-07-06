@@ -7,7 +7,7 @@ const imgHoverStyle = {
 
 function Partner() {
     return (
-        <div className="max-w-screen-xl p-4 mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20 flex flex-col gap-12" id="partner">
+        <div className="max-w-screen-xl p-4 mx-auto px-4 sm:px-6 lg:px-8  py-26 lg:mt-20 flex flex-col gap-12" id="partner">
             <div className="order-last">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                     <div className="lg:col-start-2 lg:max-w-2xl ml-auto">
@@ -81,7 +81,7 @@ function Partner() {
                                 <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/06/23/09/46/mountain-7279430_960_720.jpg" alt="1" />
                                 <AnImage className="w-40 md:w-64" src="https://cdn.pixabay.com/photo/2022/03/01/00/12/tree-7040298_960_720.jpg" alt="2" />
                             </div>
-                            <div className="flex items-start justify-center lg:justify-start space-x-4 ml-12">
+                            <div className="flex items-start justify-center lg:justify-start space-x-4 ">
                                 <AnImage className="w-24 md:w-40" src="https://cdn.pixabay.com/photo/2022/06/03/03/50/beach-7239311_960_720.jpg" alt="3" />
                                 <AnImage className="w-32 md:w-56" src="https://cdn.pixabay.com/photo/2022/02/25/04/11/traffic-7033509_960_720.jpg" alt="4" />
                             </div>

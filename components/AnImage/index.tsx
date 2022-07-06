@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Backdrop from '../Modals/Backdrop'
+import { portfolioAnimation } from '../Framer/animations'
+import { useScroll } from '../Framer/useScroll'
 
 interface Props {
     src: string;
@@ -17,24 +19,42 @@ const galleryStyle = `absolute w-full h-full`
 
 function index({ src, className, alt }: Props) {
     const [isGallery, setIsGallery] = useState(false)
+    const [element, controls] = useScroll();
     return (
         !isGallery ?
-            <motion.img whileHover={imgHoverStyle} initial={{ scale: 0 }} animate={{ scale: 1 }} alt={`${alt}`}
+            // @ts-ignore
+            <motion.img ref={element}
+                variants={portfolioAnimation}
+                // @ts-ignore
+                animate={controls}
+                transition={{
+                    delay: 0.03,
+                    type: "tween",
+                    duration: 0.8,
+                }}
+                viewport={{ once: true }}
+                whileHover={imgHoverStyle} alt={`${alt}`}
                 whileTap={{ scale: 0.9 }}
-                className={`rounded-lg shadow-lg ${className} ${isGallery ? galleryStyle : ''}`}
+                className={`rounded-lg object-cover shadow-lg ${className} ${isGallery ? galleryStyle : ''}`}
                 src={src}
                 onClick={() => { setIsGallery(!isGallery) }}
             /> :
 
             <Backdrop onClick={() => { setIsGallery(false) }}>
-                <div className=' w-full h-4/6 '>
-                    <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} alt={`${alt}`}
-                        // whileTap={{ scale: 0.9 }}
-                        className={`w-10/12 mx-auto h-full rounded-lg object-cover`}
-                        src={src}
-                        onClick={() => { setIsGallery(!isGallery) }}
-                    />
-                </div>
+                <motion.img variants={portfolioAnimation}
+                    // @ts-ignore
+                    animate={controls}
+                    transition={{
+                        delay: 0.03,
+                        type: "tween",
+                        duration: 0.8,
+                    }}
+                    viewport={{ once: true }}
+                    // whileTap={{ scale: 0.9 }}
+                    className={`w-10/12 mx-auto h-4/6 rounded-lg object-cover`}
+                    src={src}
+                    onClick={() => { setIsGallery(!isGallery) }}
+                />
             </Backdrop>
     )
 }

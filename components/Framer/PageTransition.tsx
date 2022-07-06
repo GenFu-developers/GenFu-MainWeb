@@ -4,12 +4,10 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const variants = {
     initial: {
-        scale: .5,
-        y: -50,
+        x: -1250,
     },
     enter: {
-        scale: 1,
-        y: 0,
+        x: 0,
         transition: {
             duration: 0.4,
             ease: [0.61, 1, 0.88, 1],

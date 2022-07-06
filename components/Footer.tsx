@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import Button from "./Button"
 import LogoSVGCircle from './LogoSVG/circle'
+import { footerTextAnimations, footerLogoAnimations } from './Framer/animations'
+import { useScroll } from './Framer/useScroll'
 
 export default () => {
     const NavItems: { name: string, href: string }[] = [
@@ -8,21 +10,44 @@ export default () => {
         { name: "AGB`S", href: "/" },
         { name: "Impressum", href: "/impressum" },
     ]
+    const [element, controls] = useScroll();
 
     return (
-        <footer className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-10">
-            <div className="max-w-lg sm:mx-auto sm:text-center">
+        <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-10 h-[80vh] flex flex-col-reverse ">
+            <div className="max-w-lg sm:mx-auto sm:text-center order-last">
                 {/* <img src="/GenFu-Logo-Circle.svg" className="w-32 sm:mx-auto" /> */}
-                <Button type="link" buttonStyle="none" href="/" className="mx-auto">
-                    <LogoSVGCircle />
-                </Button>
+                <motion.div animate={controls}
+                    variants={footerLogoAnimations}
+                    transition={{
+                        delay: 0.02,
+                        type: "tween",
+                        duration: 0.8,
+                    }}>
+                    <Button type="link" buttonStyle="none" href="/" className="mx-auto">
+                        <LogoSVGCircle />
+                    </Button>
+                </motion.div>
 
 
-                <p className="leading-relaxed mt-2 text-[15px]">
+                <motion.p animate={controls}
+                    variants={footerTextAnimations}
+                    transition={{
+                        delay: 0.02,
+                        type: "tween",
+                        duration: 0.8,
+                    }}
+                    className="leading-relaxed mt-2 text-[15px]">
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
+                </motion.p>
             </div>
-            <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
+            <motion.ul animate={controls}
+                variants={footerTextAnimations}
+                transition={{
+                    delay: 0.02,
+                    type: "tween",
+                    duration: 0.8,
+                }}
+                className="order-2 items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
                 {
                     NavItems.map((item: { name: string, href: string }, idx: number) => (
                         <li className=" text-txt-dark/70 dark:text-txt-light/70  hover:text-gray-900">
@@ -34,13 +59,27 @@ export default () => {
                         </li>
                     ))
                 }
-            </ul>
+            </motion.ul>
             <div className="mt-8 items-center justify-between sm:flex">
-                <div className="mt-4 sm:mt-0">
+                <motion.span
+                    animate={controls}
+                    variants={footerTextAnimations}
+                    transition={{
+                        delay: 0.02,
+                        type: "tween",
+                        duration: 0.8,
+                    }}
+                >
                     &copy; 2022 GenFu Webservices
-                </div>
+                </motion.span>
                 <div className="mt-6 sm:mt-0">
-                    <ul className="flex items-center space-x-4">
+                    <motion.ul animate={controls}
+                        variants={footerLogoAnimations}
+                        transition={{
+                            delay: 0.02,
+                            type: "tween",
+                            duration: 0.8,
+                        }} className="flex items-center space-x-4">
                         <li className="w-10 h-10 border border-txt-dark/10 dark:border-txt-light/10 rounded-full flex items-center justify-center">
                             <motion.a whileHover={{ scale: 1.15, cursor: 'pointer' }}>
                                 <svg className="svg-icon w-6 h-6 text-blue-400" viewBox="0 0 20 20">
@@ -72,7 +111,7 @@ export default () => {
                                 </svg>
                             </motion.div>
                         </li>
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
             <style jsx>{`

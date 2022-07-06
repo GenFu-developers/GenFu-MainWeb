@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 
 export default function Team() {
     return (
-        <section>
+        <section className='h-screen'>
             <div className="container px-6 mx-auto">
                 <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Das <span className="text-primary">sind wir</span></h1>
                 <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fuga vitae cupiditate, quaerat optio fugit aspernatur, aut molestiae rem, possimus maxime. Officiis minima porro a dolorem deserunt, similique molestias ab?
                 </p>
                 <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
                     <motion.div whileHover={{ scale: 1.015 }}
@@ -20,7 +21,7 @@ export default function Team() {
                                 <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Co-Founder</p>
                             </div>
                         </div>
-                        <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
+                        <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sequi nesciunt, similique necessitatibus unde tenetur sapiente voluptas iure fugit, suscipit ullam quasi delectus amet quos officia ex nostrum repellat ea.</p>
                         {/* socials */}
                         {/* <div className="flex mt-4 -mx-2">
                             <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
@@ -65,7 +66,7 @@ export default function Team() {
                                 <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Co-Founder</p>
                             </div>
                         </div>
-                        <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
+                        <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolore fugiat corrupti, amet officia nostrum? Ipsum, qui minima, sint eius expedita ratione nam vero inventore praesentium corporis minus dolore corrupti.</p>
                         {/* socials */}
                         {/* <div className="flex mt-4 -mx-2">
                             <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
