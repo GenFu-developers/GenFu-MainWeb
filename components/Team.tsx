@@ -7,8 +7,9 @@ export default function Team() {
             <div className="container px-6 mx-auto">
                 <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Das <span className="text-primary">sind wir</span></h1>
                 <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fuga vitae cupiditate, quaerat optio fugit aspernatur, aut molestiae rem, possimus maxime. Officiis minima porro a dolorem deserunt, similique molestias ab?
+                    Ursprünglich kommen wir aus völlig unterschiedlichen Bereichen.
+                    Dennoch streben wir nach einem gemeinsamen Ziel: Unabhängige Selbstverwirklichung.
+                    Lange haben wir uns Gedanken gemacht, wie wir unsere Stärken und Energien bündeln können und so ist "Generation Future" kurz "GenFu" entstanden.
                 </p>
                 <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
                     <motion.div whileHover={{ scale: 1.015 }}
@@ -17,7 +18,7 @@ export default function Team() {
                             <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
 
                             <div className="mt-4 sm:mx-4 sm:mt-0">
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Tiago Luiz König</h1>
+                                <h1 className="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Hannes Tiago Luiz König</h1>
                                 <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Co-Founder</p>
                             </div>
                         </div>

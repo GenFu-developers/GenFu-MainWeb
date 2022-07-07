@@ -27,7 +27,7 @@ export default function Home({ alert }: Props) {
       <AlertComponent alert={alert} />
       <Navbar />
       <Hero />
-      <div className="mt-24 pt-96">
+      <div className="mt-24 pt-52">
         <WMUASection />
         <Partner />
         <Features />

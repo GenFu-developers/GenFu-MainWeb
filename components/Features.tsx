@@ -1,10 +1,23 @@
 import Link from "next/link";
 import Button from "./Button";
+import { motion } from 'framer-motion'
+import { useScroll } from "./Framer/useScroll";
+import { plopAnimation } from "./Framer/animations";
 
 export default function Feature() {
+    const [element, controls] = useScroll()
     return (
-        <div className="h-screen px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="mt-24 max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        /* @ts-ignore */
+        <div ref={element} className="h-screen px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            {/* @ts-ignore */}
+            <motion.div animate={controls}
+                variants={plopAnimation}
+                transition={{
+                    delay: 0.5,
+                    type: "tween",
+                    duration: .8,
+                }}
+                className="mt-24 max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-secondary">
                         Alles an einem Ort
@@ -40,9 +53,22 @@ export default function Feature() {
                 <p className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
                     Hier bekommst du einen Einblick in unseren Businessplan. Tiefe Transparenz ist eine unserer kostenlosen Dienstleistungen.
                 </p>
-            </div>
-            <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
-                <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+            </motion.div>
+            <motion.div
+                className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
+                {/* @ts-ignore */}
+                <motion.div animate={controls}
+                    variants={{
+                        'hidden': { x: 400, scale: 0, opacity: 0 },
+                        'show': { x: 0, scale: 1, opacity: 1 }
+                    }}
+                    transition={{
+                        delay: 0.5,
+                        type: "tween",
+                        duration: .8,
+                    }}
+
+                    className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
@@ -65,7 +91,7 @@ export default function Feature() {
                             Unsere Idee ist es, Brücken für Firmengründer, mittelständige Unternehmen und Privatpersonen zu bauen. Mit unseren individuellen Ansätzen beginnt deine Reise in die Digitalisierung.
                         </p>
                     </div>
-                </div>
+                </motion.div>
                 <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
@@ -85,13 +111,11 @@ export default function Feature() {
                     </div>
                     <div>
                         <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">
-                            When has justice
+                            Community
                         </h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            Rough pomfret lemon shark plownose chimaera southern sandfish
-                            kokanee northern sea robin Antarctic cod. Yellow-and-black
-                            triplefin gulper South American Lungfish mahi-mahi, butterflyfish
-                            glass catfish soapfish ling gray mullet!
+                            Der Aufbau einer Community, gehört für uns ebenfalls dazu um ein gesundes und innovatives Umfeld zu schaffen. Nach langen Überlegungen haben wir uns entschlossen
+                            folgende Wege zu gehen
                         </p>
                     </div>
                 </div>
@@ -140,17 +164,14 @@ export default function Feature() {
                     </div>
                     <div>
                         <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">
-                            A slice of heaven
+                            Organisation und Team
                         </h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            Disrupt inspire and think tank, social entrepreneur but
-                            preliminary thinking think tank compelling. Inspiring, invest
-                            synergy capacity building, white paper; silo, unprecedented
-                            challenge B-corp problem-solvers.
+                            Wir sind schon einen längeren Zeitraum, ein gut eingespieltes Team. Es ist heutzutage extrem schwer Menschen zu finden, die für die selbe Sache brennen und auch gemeinsam daran arbeiten wollen. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu nutzen um der Menschheit einen Mehrwert zu geben.
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div >
+        </div >
     );
 };
