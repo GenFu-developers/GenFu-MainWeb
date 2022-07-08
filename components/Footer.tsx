@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import Button from "./Button"
-import LogoSVGCircle from './LogoSVG/circle'
+import LogoSVGCircle from './Logo/circle'
 import { footerTextAnimations, plopAnimation } from './Framer/animations'
 import { useScroll } from './Framer/useScroll'
 
@@ -14,7 +14,7 @@ export default () => {
 
     return (
         // @ts-ignore
-        <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-10 h-[80vh] flex flex-col-reverse ">
+        <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-40 h-screen  flex flex-col-reverse ">
             <div className="max-w-lg sm:mx-auto sm:text-center order-last  ">
                 {/* <img src="/GenFu-Logo-Circle.svg" className="w-32 sm:mx-auto" /> */}
                 {/*  @ts-ignore */}

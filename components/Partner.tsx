@@ -8,7 +8,7 @@ function Partner() {
     const [element, controls] = useScroll()
     return (
         // @ts-ignore
-        <div ref={element} className="max-w-screen-xl p-4 mx-auto px-4 sm:px-6 lg:px-8  py-26 lg:mt-20 flex flex-col gap-12" id="partner">
+        <div ref={element} className="max-w-screen-xl p-4 mx-auto px-4 sm:px-6 lg:px-8  flex flex-col gap-12" id="partner">
             <div className="order-last">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                     <div className="lg:col-start-2 lg:max-w-2xl ml-auto">

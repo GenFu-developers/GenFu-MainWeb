@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Button from "../Button";
 
 const path01Variants = {
     open: { d: "M3.06061 2.99999L21.0606 21" },
@@ -37,7 +38,7 @@ export default ({ callback, className }: Props) => {
     };
 
     return (
-        <button onClick={onClick} className={className}>
+        <Button type="button" buttonStyle="none" callback={onClick} className={className}>
             <svg className="stroke-txt-dark stroke-2 dark:stroke-txt-light" width="24" height="24" viewBox="0 0 24 24">
                 <motion.path
                     {...path01Variants.closed}
@@ -50,6 +51,6 @@ export default ({ callback, className }: Props) => {
                     transition={{ duration: 0.2 }}
                 />
             </svg>
-        </button>
+        </Button>
     );
 };

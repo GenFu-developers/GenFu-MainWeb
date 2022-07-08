@@ -7,11 +7,12 @@ import Features from '../components/Features';
 import WMUASection from '../components/Sections/WasMachtUnsAus';
 import Steps from '../components/Steps';
 import Footer from '../components/Footer';
-import Team from '../components/Team';
+import Team from '../components/Team/index';
 import Partner from '../components/Partner';
 import { sanityClient } from '../sanity';
 import { Alert } from '../typings';
 import AlertComponent from '../components/Alert/LandingPageAlert';
+import Faq from '../components/Sections/FAQ';
 
 interface Props {
   alert: Alert
@@ -27,12 +28,13 @@ export default function Home({ alert }: Props) {
       <AlertComponent alert={alert} />
       <Navbar />
       <Hero />
-      <div className="mt-24 pt-52">
+      <div className="flex flex-col">
         <WMUASection />
         <Partner />
         <Features />
         <Steps />
         <Team />
+        <Faq />
         <Footer />
       </div>
 

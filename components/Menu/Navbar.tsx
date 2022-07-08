@@ -4,6 +4,8 @@ import { useTheme } from "next-themes";
 import Button from "../Button";
 import { motion } from "framer-motion";
 import MenuButton from './MenuButton'
+import BigLogo from "../Logo/big";
+import ContactCall from '../ContactCall/index'
 
 interface Props {
     shadow?: boolean
@@ -81,20 +83,18 @@ export default ({ shadow }: Props) => {
     if (shadow === undefined) shadow = true
     return (
         <header className={`z-50 w-full top-0 max-h-20 fixed  bg-light-container dark:bg-dark-container text-txt-dark dark:text-txt-light ${shadow ? 'shadow-lg' : ''}`}>
-            <div className="container mx-auto flex p-5 justify-between md:justify-center   md:flex-row items-center ">
-                <nav className="gap-5 hidden md:flex  items-center text-base md:ml-auto">
+            <div className="xl:container flex p-5 mx-auto items-center">
+                <nav className="gap-5 hidden md:flex  items-center text-base md:ml-auto w-full">
                     {navigation.links.map((item, idx) => (
                         <Button key={idx} type="link" buttonStyle="none" href={item.path}>
                             <span className="text-txt-dark dark:text-txt-light hover:text-txt-dark/70  dark:hover:text-txt-light/70">{item.title}</span>
                         </Button>
                     ))}
                 </nav>
-                <Button buttonStyle="none" className="my-auto h-10 mx-auto" type="link" href="/">
-                    <img src={theme === 'dark' ? 'GenFu-Logo-darkmode.svg' : 'GenFu-Logo.svg'} className="h-9 scale-125 relative -top-2" alt="" />
-
-                </Button>
-                <MenuButton callback={() => { setMenuState(!menuState) }} className="block md:hidden" />
-                <div className="w-2/5  hidden md:flex gap-5 lg:justify-end ml-5 lg:ml-0 ">
+                <div className="w-full md:justify-center md:hidden mmd:flex scale-125 ml-20 md:ml-0">
+                    <BigLogo />
+                </div>
+                <div className=" hidden md:flex gap-5  w-full justify-end">
                     {navigation.buttons.map((navItem) => (
                         <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
                             <span>
@@ -104,26 +104,30 @@ export default ({ shadow }: Props) => {
                     ))}
                     {isSSRDone ? renderThemeChanger() : null}
                 </div>
-                {/* mobile menu */}
-                {menuState &&
-                    <motion.div initial="initial" animate="enter" variants={mobileNavVariants}
-                        className="z-50  pt-5 md:hidden absolute left-0 flex flex-col items-center top-20 w-full pb-5 bg-background-light dark:bg-dark-container shadow-lg">
-                        <div className="flex gap-5">
-                            {navigation.buttons.map((navItem) => (
-                                <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
-                                    <span>{navItem.title}</span>
+                <MenuButton callback={() => { setMenuState(!menuState) }} className="block  md:hidden absolute right-4" />
+                <div>
+                    {/* mobile menu */}
+                    {menuState &&
+                        <motion.div initial="initial" animate="enter" variants={mobileNavVariants}
+                            className="z-50  pt-5 md:hidden absolute left-0 flex flex-col items-center top-20 w-full pb-5 bg-background-light dark:bg-dark-container shadow-lg">
+                            <div className="flex gap-5">
+                                {navigation.buttons.map((navItem) => (
+                                    <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
+                                        <span>{navItem.title}</span>
+                                    </Button>
+                                ))}
+                                {isSSRDone ? renderThemeChanger() : null}
+                            </div>
+                            {navigation.links.map((navItem) => (
+                                <Button buttonStyle="none" type="link" href={navItem.path} >
+                                    <span className="text-txt-dark dark:text-txt-light">{navItem.title}</span>
                                 </Button>
                             ))}
-                            {isSSRDone ? renderThemeChanger() : null}
-                        </div>
-                        {navigation.links.map((navItem) => (
-                            <Button buttonStyle="none" type="link" href={navItem.path} >
-                                <span className="text-txt-dark dark:text-txt-light">{navItem.title}</span>
-                            </Button>
-                        ))}
-                    </motion.div>
-                }
+                        </motion.div>
+                    }
+                </div>
             </div>
+            <ContactCall />
         </header>
     )
 }

@@ -8,7 +8,7 @@ export default function Feature() {
     const [element, controls] = useScroll()
     return (
         /* @ts-ignore */
-        <div ref={element} className="h-screen px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div ref={element} className="mb-64 h-screen px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             {/* @ts-ignore */}
             <motion.div animate={controls}
                 variants={plopAnimation}
@@ -59,8 +59,8 @@ export default function Feature() {
                 {/* @ts-ignore */}
                 <motion.div animate={controls}
                     variants={{
-                        'hidden': { x: 400, scale: 0, opacity: 0 },
-                        'show': { x: 0, scale: 1, opacity: 1 }
+                        'hidden': { x: -400, y: -100, scale: 0, opacity: 0 },
+                        'show': { x: 0, y: 0, scale: 1, opacity: 1 }
                     }}
                     transition={{
                         delay: 0.5,
@@ -92,7 +92,18 @@ export default function Feature() {
                         </p>
                     </div>
                 </motion.div>
-                <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                {/* @ts-ignore */}
+                <motion.div animate={controls}
+                    variants={{
+                        'hidden': { x: -400, y: 100, scale: 0, opacity: 0 },
+                        'show': { x: 0, y: 0, scale: 1, opacity: 1 }
+                    }}
+                    transition={{
+                        delay: 0.5,
+                        type: "tween",
+                        duration: .8,
+                    }}
+                    className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
@@ -118,8 +129,19 @@ export default function Feature() {
                             folgende Wege zu gehen
                         </p>
                     </div>
-                </div>
-                <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                </motion.div>
+                {/* @ts-ignore */}
+                <motion.div animate={controls}
+                    variants={{
+                        'hidden': { x: 400, y: -100, scale: 0, opacity: 0 },
+                        'show': { x: 0, y: 0, scale: 1, opacity: 1 }
+                    }}
+                    transition={{
+                        delay: 0.5,
+                        type: "tween",
+                        duration: .8,
+                    }}
+                    className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
@@ -144,8 +166,19 @@ export default function Feature() {
                             Unser Denken ist und war schon immer langfristig. Aus diesem Grunde, gehen wir gerne doppelte Wege und fokussieren uns darauf aus unseren Schwächen und Fehlern die wir machen und noch machen werden, zu lernen.
                         </p>
                     </div>
-                </div>
-                <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+                </motion.div>
+                {/* @ts-ignore */}
+                <motion.div animate={controls}
+                    variants={{
+                        'hidden': { x: 400, y: 100, scale: 0, opacity: 0 },
+                        'show': { x: 0, y: 0, scale: 1, opacity: 1 }
+                    }}
+                    transition={{
+                        delay: 0.5,
+                        type: "tween",
+                        duration: .8,
+                    }}
+                    className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
                     <div className="mr-4">
                         <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-200 dark:bg-indigo-400">
                             <svg
@@ -170,7 +203,7 @@ export default function Feature() {
                             Wir sind schon einen längeren Zeitraum, ein gut eingespieltes Team. Es ist heutzutage extrem schwer Menschen zu finden, die für die selbe Sache brennen und auch gemeinsam daran arbeiten wollen. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu nutzen um der Menschheit einen Mehrwert zu geben.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </motion.div >
         </div >
     );
