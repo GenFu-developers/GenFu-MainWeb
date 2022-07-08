@@ -3,6 +3,7 @@ import Button from "./Button"
 import LogoSVGCircle from './Logo/circle'
 import { footerTextAnimations, plopAnimation } from './Framer/animations'
 import { useScroll } from './Framer/useScroll'
+import ContactForm from "./Forms/Contact"
 
 export default () => {
     const NavItems: { name: string, href: string }[] = [
@@ -14,8 +15,8 @@ export default () => {
 
     return (
         // @ts-ignore
-        <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-40 h-screen  flex flex-col-reverse ">
-            <div className="max-w-lg sm:mx-auto sm:text-center order-last  ">
+        <footer ref={element} className="text-txt-dark/60 dark:text-txt-light/60 px-4 py-5 max-w-screen-xl mx-auto mt-96 md:mt-96 h-screen  flex flex-col-reverse ">
+            <div className="max-w-lg sm:mx-auto sm:text-center order-last">
                 {/* <img src="/GenFu-Logo-Circle.svg" className="w-32 sm:mx-auto" /> */}
                 {/*  @ts-ignore */}
                 <motion.div animate={controls}
@@ -64,6 +65,8 @@ export default () => {
                 }
             </motion.ul>
 
+            {/* contact form */}
+            <ContactForm className="order-2 " />
             <div className="mt-8 items-center justify-between sm:flex">
                 {/*  @ts-ignore */}
                 <motion.span animate={controls}

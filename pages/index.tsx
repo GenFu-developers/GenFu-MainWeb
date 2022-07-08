@@ -35,9 +35,10 @@ export default function Home({ alert }: Props) {
         <Steps />
         <Team />
         <Faq />
+      </div>
+      <div className=''>
         <Footer />
       </div>
-
     </div >
   )
 }

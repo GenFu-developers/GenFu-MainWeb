@@ -3,9 +3,9 @@ import Button from "../Button";
 export default function Header() {
     return (
         <div className="h-screen top-10">
-            <img className="absolute  w-full h-full" src="/hero-image.png" alt="" />
-            <div className="relative ml-20 w-max top-64 flex flex-col gap-10">
-                <h1 className="text-txt-light text-7xl">
+            <img className="absolute  w-full h-full object-cover" src="/hero-image.png" alt="" />
+            <div className="relative text-shadow-md-dark px-2 md:ml-20 w-max max-w-xs md:max-w-md lg:max-w-screen-md mx-auto top-64 flex flex-col gap-5 md:gap-8 lg:gap-10">
+                <h1 className="text-txt-light text-4xl  md:text-6xl lg:text-7xl">
                     Wir <br />
                     entwickeln <br />
                     <span className="relative text-primary">deine Website</span>

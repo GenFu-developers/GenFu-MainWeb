@@ -21,7 +21,7 @@ export default function index() {
     const [element, controls] = useScroll()
     return (
         // @ts-ignore
-        <section ref={element} className='h-screen sm:mb-96'>
+        <section ref={element} className='h-screen mb-96 md:mb-20 '>
             <div className="container px-6 mx-auto">
                 {/* @ts-ignore */}
                 <motion.div animate={controls}
@@ -39,7 +39,7 @@ export default function index() {
                         Lange haben wir uns Gedanken gemacht, wie wir unsere Stärken und Energien bündeln können und so ist "Generation Future" kurz "GenFu" entstanden.
                     </p>
                 </motion.div>
-                <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
+                <div className="flex flex-col  md:flex-row gap-5">
                     {teamData.map((item, idx) => (
                         <TeamCard name={item.name} role={item.role} animationReverse={idx != 0} text={item.text} />
                     ))}

@@ -26,7 +26,7 @@ export default function TeamCard({ name, role, text, img, animationReverse }: Pr
                 duration: 0.8,
             }}
             whileHover={{ scale: 1.015 }}
-            className="px-12 py-12 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent" >
+            className="px-12 py-12 transition-colors duration-200 w-full transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent" >
             <div className="flex flex-col sm:-mx-4 sm:flex-row">
                 <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src={img ? img : '/team-placeholder.png'} alt="" />
 
