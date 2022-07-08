@@ -95,7 +95,7 @@ export default function Feature() {
                 {/* @ts-ignore */}
                 <motion.div animate={controls}
                     variants={{
-                        'hidden': { x: -400, y: 100, scale: 0, opacity: 0 },
+                        'hidden': { x: 400, y: 100, scale: 0, opacity: 0 },
                         'show': { x: 0, y: 0, scale: 1, opacity: 1 }
                     }}
                     transition={{
@@ -122,11 +122,10 @@ export default function Feature() {
                     </div>
                     <div>
                         <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">
-                            Community
+                            Organisation und Team
                         </h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            Der Aufbau einer Community, gehört für uns ebenfalls dazu um ein gesundes und innovatives Umfeld zu schaffen. Nach langen Überlegungen haben wir uns entschlossen
-                            folgende Wege zu gehen
+                            Wir sind schon einen längeren Zeitraum, ein gut eingespieltes Team. Es ist heutzutage extrem schwer Menschen zu finden, die für die selbe Sache brennen und auch gemeinsam daran arbeiten wollen. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu nutzen um der Menschheit einen Mehrwert zu geben.
                         </p>
                     </div>
                 </motion.div>
@@ -170,7 +169,7 @@ export default function Feature() {
                 {/* @ts-ignore */}
                 <motion.div animate={controls}
                     variants={{
-                        'hidden': { x: 400, y: 100, scale: 0, opacity: 0 },
+                        'hidden': { x: -400, y: 100, scale: 0, opacity: 0 },
                         'show': { x: 0, y: 0, scale: 1, opacity: 1 }
                     }}
                     transition={{
@@ -197,10 +196,11 @@ export default function Feature() {
                     </div>
                     <div>
                         <h6 className="mb-3 text-xl font-bold leading-5 dark:text-txt-light">
-                            Organisation und Team
+                            Community
                         </h6>
                         <p className="mb-3 text-sm text-gray-900 dark:text-txt-light/80">
-                            Wir sind schon einen längeren Zeitraum, ein gut eingespieltes Team. Es ist heutzutage extrem schwer Menschen zu finden, die für die selbe Sache brennen und auch gemeinsam daran arbeiten wollen. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu nutzen um der Menschheit einen Mehrwert zu geben.
+                            Der Aufbau einer Community, gehört für uns ebenfalls dazu um ein gesundes und innovatives Umfeld zu schaffen. Nach langen Überlegungen haben wir uns entschlossen
+                            folgende Wege zu gehen
                         </p>
                     </div>
                 </motion.div>

@@ -4,7 +4,7 @@ import BlogList from '../components/Blog/BlogList'
 /* Sanity imports */
 import { sanityClient, urlFor } from '../sanity'
 import { Post } from '../typings'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 
 interface Posts {
     posts: [Post]

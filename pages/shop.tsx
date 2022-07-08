@@ -4,7 +4,7 @@ import { sanityClient } from '../sanity'
 import { ShopCategory } from '../typings'
 import ShopCategoryCard from '../components/Shop/ShopCategoryCard'
 import { motion } from 'framer-motion'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 import ShopNavbar from '../components/Shop/ShopNavbar'
 
 interface Props {

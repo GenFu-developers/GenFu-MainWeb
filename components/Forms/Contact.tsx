@@ -1,13 +1,27 @@
 import React from 'react'
 import Button from '../Button';
+import { motion } from 'framer-motion'
+import { useScroll } from '../Framer/useScroll'
 
 interface Props {
     className: string;
 }
 
 function ContactForm({ className }: Props) {
+    const [element, controls] = useScroll()
     return (
-        <div className={className}>
+        // @ts-ignore
+        <motion.div ref={element} className={className} animate={controls}
+            variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1 }
+            }}
+            transition={{
+                delay: 0.02,
+                type: "tween",
+                duration: 1,
+            }}
+        >
             <div
                 className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-txt-dark dark:text-txt-light rounded-lg ">
                 <div className="flex flex-col justify-between">
@@ -68,34 +82,30 @@ function ContactForm({ className }: Props) {
                             <path d="M419.53 805.98L418.02 807.83C417.67 808.26 417.03 808.32 416.6 807.97L390 786.31C389.57 785.96 389.51 785.32 389.86 784.89L391.37 783.04C391.72 782.61 392.36 782.55 392.79 782.9L419.4 804.57C419.81 804.91 419.88 805.55 419.53 805.98Z" fill="white" />
                             <path d="M419.53 805.3L418.02 803.45C417.67 803.02 417.03 802.96 416.6 803.31L390 824.98C389.57 825.33 389.51 825.97 389.86 826.4L391.37 828.25C391.72 828.68 392.36 828.74 392.79 828.39L419.4 806.72C419.81 806.37 419.88 805.73 419.53 805.3Z" fill="white" />
                         </svg>
-
-
                     </div>
                 </div>
-                <div className="">
+                <form action="/api/contactUs" method="POST">
                     <div>
                         <span className="uppercase text-sm text-txt-dark/70 dark:text-txt-light/70 font-bold">Name</span>
                         <input className="w-full bg-dark-container/20 dark:bg-light-container/20 text-txt-dark dark:text-txt-light mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" placeholder="" />
+                            type="text" placeholder="name..." name='name' />
                     </div>
                     <div className="mt-8">
                         <span className="uppercase text-sm text-txt-dark/70 dark:text-txt-light/70 font-bold">Email</span>
                         <input className="w-full bg-dark-container/20 dark:bg-light-container/20 text-txt-dark dark:text-txt-light mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" />
+                            type="email" placeholder='email...' name='email' />
                     </div>
                     <div className="mt-8">
                         <span className="uppercase text-sm text-txt-dark/70 dark:text-txt-light/70 font-bold">Nachricht</span>
-                        <textarea
+                        <textarea name='message'
                             className="w-full h-32 bg-dark-container/20 dark:bg-light-container/20 text-txt-dark dark:text-txt-light mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                     <div className="mt-8">
-                        <Button type='button' buttonStyle='primary' className='mx-auto '>
-                            <span>Nachricht senden</span>
-                        </Button>
+                        <button className=''>Nachricht senden</button>
                     </div>
-                </div>
+                </form>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

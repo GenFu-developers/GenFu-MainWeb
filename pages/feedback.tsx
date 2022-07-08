@@ -1,6 +1,6 @@
 import React from 'react'
 import Feedback from '../components/Feedback/index'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Menu/Navbar'
 
 function feedback() {

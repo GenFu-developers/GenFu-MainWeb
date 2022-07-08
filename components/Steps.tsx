@@ -60,7 +60,11 @@ const stepData = [
 
 export default function Steps() {
     const [element, controls] = useScroll()
-    const hoverStyle = { scale: 1.015 }
+    const checkpointLine = (idx: number) => {
+        if (idx === 0) return 'top-[3.8rem] h-36'
+        if (idx === stepData.length - 1) return '-top-[4.2rem] h-20'
+        return true
+    }
     return (
         //@ts-ignore 
         <div ref={element} className="text-gray-600 body-font px-5 mb-40">
@@ -96,10 +100,10 @@ export default function Steps() {
                                     duration: 0.8,
                                 }}
                                 className="h-full w-6 absolute inset-0 flex items-center justify-center">
-                                <div className="h-full w-1 bg-txt-dark/50 dark:bg-txt-light/50 pointer-events-none"></div>
+                                <div className={`h-full relative ${checkpointLine(idx)} w-1 bg-txt-dark/50 dark:bg-txt-light/50 pointer-events-none`}></div>
                             </motion.div>
                             {/* @ts-ignore */}
-                            <motion.div animate={controls}
+                            < motion.div animate={controls}
                                 variants={{
                                     hidden: { opacity: 0, x: -400 },
                                     show: { opacity: 1, x: 0 }
@@ -128,6 +132,7 @@ export default function Steps() {
                                 <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                                     <h2 className="font-medium title-font text-txt-dark dark:text-txt-light mb-1 text-xl">{item.title}</h2>
                                     <div className="flex flex-col lg:flex-row gap-4">
+                                        {/* Company Text */}
                                         {/* @ts-ignore */}
                                         <motion.div animate={controls}
                                             variants={plopAnimation}
@@ -143,6 +148,7 @@ export default function Steps() {
 
                                             <p className="text-txt-dark/60 dark:text-txt-light/50">{item.text.service}</p>
                                         </motion.div>
+                                        {/* Customer Text */}
                                         {/* @ts-ignore */}
                                         <motion.div animate={controls}
                                             variants={plopAnimation}
@@ -164,7 +170,7 @@ export default function Steps() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div >
         </div >
     );
 };

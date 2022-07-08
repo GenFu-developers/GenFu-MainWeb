@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import Button from "./Button"
-import LogoSVGCircle from './Logo/circle'
-import { footerTextAnimations, plopAnimation } from './Framer/animations'
-import { useScroll } from './Framer/useScroll'
-import ContactForm from "./Forms/Contact"
+import Button from "../Button"
+import LogoSVGCircle from '../Logo/circle'
+import { footerTextAnimations, plopAnimation } from '../Framer/animations'
+import { useScroll } from '../Framer/useScroll'
+import ContactForm from "../Forms/Contact"
 
 export default () => {
     const NavItems: { name: string, href: string }[] = [
@@ -66,7 +66,8 @@ export default () => {
             </motion.ul>
 
             {/* contact form */}
-            <ContactForm className="order-2 " />
+            <ContactForm className="order-last " />
+
             <div className="mt-8 items-center justify-between sm:flex">
                 {/*  @ts-ignore */}
                 <motion.span animate={controls}

@@ -6,7 +6,7 @@ import Hero from '../components/Hero/HeroHeader';
 import Features from '../components/Features';
 import WMUASection from '../components/Sections/WasMachtUnsAus';
 import Steps from '../components/Steps';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import Team from '../components/Team/index';
 import Partner from '../components/Partner';
 import { sanityClient } from '../sanity';
