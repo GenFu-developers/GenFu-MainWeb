@@ -17,10 +17,10 @@ function Button({ buttonStyle, callback, type, href, className, children, loadin
     const basicStyle = 'rounded-md '
     const style = {
         outline: basicStyle + 'border-2 text-txt-dark dark:text-txt-light',
-        primary: basicStyle + 'bg-primary',
-        secondary: basicStyle + 'bg-secondary',
-        warning: basicStyle + 'bg-red-500',
-        success: basicStyle + 'bg-primary-green',
+        primary: basicStyle + 'bg-primary text-txt-light',
+        secondary: basicStyle + 'bg-secondary text-txt-light',
+        warning: basicStyle + 'bg-red-500 text-txt-light',
+        success: basicStyle + 'bg-primary-green text-txt-light',
         none: basicStyle + 'text-txt-dark dark:text-txt-light',
     }
     return (
