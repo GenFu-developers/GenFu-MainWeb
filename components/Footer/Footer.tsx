@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import Button from "../Button"
+import Button from "../Button/Button"
 import LogoSVGCircle from '../Logo/circle'
 import { footerTextAnimations, plopAnimation } from '../Framer/animations'
 import { useScroll } from '../Framer/useScroll'
@@ -7,8 +7,8 @@ import ContactForm from "../Forms/Contact"
 
 export default () => {
     const NavItems: { name: string, href: string }[] = [
-        { name: "Datenschutz", href: "/" },
-        { name: "AGB`S", href: "/" },
+        { name: "Datenschutz", href: "/datenschutz" },
+        { name: "AGB`S", href: "/agbs" },
         { name: "Impressum", href: "/impressum" },
     ]
     const [element, controls] = useScroll();
@@ -123,7 +123,7 @@ export default () => {
                     </motion.ul> */}
                 </div>
             </div>
-            <style jsx>{`
+            <style >{`
                 .svg-icon path,
                 .svg-icon polygon,
                 .svg-icon rect {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "./Button";
+import Button from "./Button/Button";
 import { motion } from 'framer-motion'
 import { useScroll } from "./Framer/useScroll";
 import { plopAnimation } from "./Framer/animations";

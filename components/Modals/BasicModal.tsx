@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MouseEventHandler } from "react";
-import Button from "../Button";
+import Button from "../Button/Button";
 import Backdrop from "./Backdrop";
 
 const dropIn = {

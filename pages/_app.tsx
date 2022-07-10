@@ -2,16 +2,17 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import PageTransition from '../components/Framer/PageTransition'
-import Link from 'next/link'
+import { SessionProvider } from "next-auth/react"
 
 const publicPages = ['']
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps }, router }: AppProps) {
   return (
-    <PageTransition key={router.route} >
-      <ThemeProvider enableSystem={true} attribute="class">
-        <Component {...pageProps} />
-        {/* {publicPages.includes(router.pathname) ? (
+    <SessionProvider session={session}>
+      <PageTransition key={router.route} >
+        <ThemeProvider enableSystem={true} attribute="class">
+          <Component {...pageProps} />
+          {/* {publicPages.includes(router.pathname) ? (
             <Component {...pageProps} />
           ) : (
             <>
@@ -30,8 +31,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               </SignedOut>
             </>
           )} */}
-      </ThemeProvider>
-    </PageTransition >
+        </ThemeProvider>
+      </PageTransition >
+    </SessionProvider>
   )
 }
 

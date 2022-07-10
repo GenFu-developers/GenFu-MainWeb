@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+import Button from '../Button/Button'
 import { motion } from 'framer-motion'
 import { useScroll } from '../Framer/useScroll'
 

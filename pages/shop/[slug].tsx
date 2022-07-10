@@ -3,7 +3,7 @@ import React from 'react'
 import { sanityClient, urlFor } from '../../sanity';
 import { ShopCategory, ShopItem } from '../../typings';
 import ShopItemComponent from '../../components/Shop/ShopItem';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 import Modal from '../../components/Modals/index';
 import Footer from '../../components/Footer/Footer';
 import Termin from '../../components/Termin/index'

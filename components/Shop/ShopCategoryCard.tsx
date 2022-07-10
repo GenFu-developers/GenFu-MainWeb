@@ -3,7 +3,7 @@ import { ShopCategory } from '../../typings';
 import Link from 'next/link';
 import { urlFor } from '../../sanity';
 import { motion } from 'framer-motion'
-import Button from '../Button';
+import Button from '../Button/Button';
 
 
 function ShopCategoryCard({ name, slug, description, mainImage }: ShopCategory) {

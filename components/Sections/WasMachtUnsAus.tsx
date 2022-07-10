@@ -39,10 +39,9 @@ export default function Product() {
                                 duration: 0.8,
                             }}
                             className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
-                            Wir haben uns gegründet, um alte, moralische Werte zurück zu bringen.
-                            Die Rede ist von Vertrauen, Leidenschaft und Liebe.
-                            <br />
-                            Was das für uns bedeutet siehst du --hier--. {'(Leidenschaft Liebe Vertrauen erklärt)'}
+                            Wir sind innovative Visionäre, mit dem Wille, Bildung/Wissen zu vermitteln und ebenfalls Probleme zu lösen. Wir analysieren jeden Schritt von uns aber auch die Schritte unserer Wettbewerber.
+                            Grundsätzlich fehlt ein tiefes Vertrauen zwischen Kunde und Firma. Wir beziehen Vertrauen, in alle Bereiche des Businessplans und der Skalierung mit ein, ebenfalls wie unseren anderen Alleinstellungmerkmale (Vision, Service, Qualität, Vertrauen, Partner, Nachhaltigkeit).
+                            Falls du wissen willst, was ein USP ist und was unserer ist. Schaue (hier)
                         </motion.p>
                     </div>
                     <div className="grid gap-8 row-gap-8 sm:grid-cols-2">
@@ -72,7 +71,7 @@ export default function Product() {
                                 Dienstleistung
                             </h6>
                             <p className="text-md text-gray-900 dark:text-txt-light/80">
-                                Wir stehen für individuelle, qualitativ hochwertige und schnelle Arbeit. Eine tiefgehende Zusammenarbeit mit unseren Kunden verspricht das gewünschte Endprodukt.
+                                Wir haben es uns zur Aufgabe gemacht, alle W-Fragen rund um das Thema Websites zu beantworten, Websites zu erstellen, zu pflegen/Warten und insgesamt Probleme zu lösen, die verbunden mit digitalen Dienstleistungen auftreten.
                             </p>
                         </motion.div>
                         {/* @ts-ignore */}
@@ -101,14 +100,13 @@ export default function Product() {
                                 Kundenverhältnis
                             </h6>
                             <p className="text-md text-gray-900 dark:text-txt-light/80">
-                                Bei GenFu steht der Kunde und seine Bedürfnisse an erster Stelle.
-                                Kapitalismus ohne Moral ist für uns keine Wahl!
+                                Eine starke Kundenbindung gehört für uns bei GenFu mit zu den fundamentalen Elementen. Würden wir das nicht anstreben, wäre unser Unterfangen sinnlos. Vertrauen zurückbringen, welches durch fehlende Dienstleistungen verloren gegangen ist.
                             </p>
                         </motion.div>
                     </div>
                 </div>
                 <AnImage
-                    className="w-10/12 h-56 shadow-lg mx-auto sm:h-96"
+                    className="w-10/12 h-56 shadow-lg mx-auto sm:h-96 my-auto"
                     src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                 />
 

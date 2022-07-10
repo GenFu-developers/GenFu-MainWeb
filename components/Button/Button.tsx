@@ -14,14 +14,14 @@ interface Props {
 
 function Button({ buttonStyle, callback, type, href, className, children, loading }: Props) {
     const [isLoading, setIsLoading] = useState(false);
-    const basicStyle = 'rounded-md text-white '
+    const basicStyle = 'rounded-md '
     const style = {
         outline: basicStyle + 'border-2 text-txt-dark dark:text-txt-light',
         primary: basicStyle + 'bg-primary',
         secondary: basicStyle + 'bg-secondary',
         warning: basicStyle + 'bg-red-500',
         success: basicStyle + 'bg-primary-green',
-        none: basicStyle,
+        none: basicStyle + 'text-txt-dark dark:text-txt-light',
     }
     return (
         <motion.div className={`${style[buttonStyle]} py-2 px-4 w-max cursor-pointer ${className ? className : ''}`}

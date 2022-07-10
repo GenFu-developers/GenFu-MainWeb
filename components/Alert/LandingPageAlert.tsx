@@ -1,7 +1,7 @@
 import React from 'react'
 import { Alert } from '../../typings'
 import AlertComponent from './index'
-import Button from '../Button'
+import Button from '../Button/Button'
 
 interface Props {
     alert: Alert

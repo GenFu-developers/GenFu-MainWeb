@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from '../components/Button'
+import Button from '../components/Button/Button'
 import Navbar from '../components/Menu/Navbar'
 
 function FourOhFour() {
     return (
         <div>
             <Navbar />
-            <div className="flex items-center flex-col justify-center lg:flex-row py-28 px-6 md:px-24 md:py-20 lg:py-32 gap-16 lg:gap-28">
+            <div className="bg-background-light dark:background-dark h-screen flex items-center flex-col justify-center lg:flex-row py-28 px-6 md:px-24 md:py-20 lg:py-32 gap-16 lg:gap-28">
                 <div className="w-full lg:w-1/2">
                     <img className="hidden lg:block" src="https://i.ibb.co/v30JLYr/Group-192-2.png" />
                     <img className="hidden md:block lg:hidden" src="https://i.ibb.co/c1ggfn2/Group-193.png" />

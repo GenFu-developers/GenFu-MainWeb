@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Button from '../Button'
+import Button from '../Button/Button'
 import AnImage from '../AnImage/index'
 
 function HeroHeaderText() {

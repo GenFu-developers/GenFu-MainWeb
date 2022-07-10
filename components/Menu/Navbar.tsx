@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import Button from "../Button";
+import Button from "../Button/Button";
 import { motion } from "framer-motion";
 import MenuButton from './MenuButton'
 import BigLogo from "../Logo/big";
 import ContactCall from '../ContactCall/index'
-
+import AuthButtons from '../Auth/AuthButtons'
 interface Props {
     shadow?: boolean
 }
@@ -127,6 +127,7 @@ export default ({ shadow }: Props) => {
                     }
                 </div>
             </div>
+            <AuthButtons />
             <ContactCall />
         </header>
     )

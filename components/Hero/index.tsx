@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroHeaderText from './HeroHeaderText';
-import Button from '../Button';
+import Button from '../Button/Button';
 function Index() {
     return (
         <header className="">

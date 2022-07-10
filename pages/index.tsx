@@ -5,7 +5,7 @@ import Navbar from '../components/Menu/Navbar';
 import Hero from '../components/Hero/HeroHeader';
 import Features from '../components/Features';
 import WMUASection from '../components/Sections/WasMachtUnsAus';
-import Steps from '../components/Steps';
+import Steps from '../components/Steps/index';
 import Footer from '../components/Footer/Footer';
 import Team from '../components/Team/index';
 import Partner from '../components/Partner';
@@ -17,6 +17,7 @@ import Faq from '../components/Sections/FAQ';
 interface Props {
   alert: Alert
 }
+
 
 export default function Home({ alert }: Props) {
   return (

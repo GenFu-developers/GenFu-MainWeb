@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Button from "../Button";
+import Button from "../Button/Button";
 
 const path01Variants = {
     open: { d: "M3.06061 2.99999L21.0606 21" },

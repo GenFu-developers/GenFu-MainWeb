@@ -1,17 +1,20 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
-
-console.log(process.env.GOOGLE_ID);
-console.log(process.env.GOOGLE_SECRET);
+import EmailProvider from 'next-auth/providers/email'
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
+// @ts-ignore
+import clientPromise from '../../../lib/mongodb'
 
 
 export default NextAuth({
-    // Configure one or more authentication providers
+    // @ts-ignore
+    adapter: MongoDBAdapter(clientPromise),
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
-        GoogleProvider({
-            clientId: '857657527726-fimo5s7tkqeljndu53vu33oomln230gf.apps.googleusercontent.com',
-            clientSecret: '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',
+        EmailProvider({
+            server: process.env.EMAIL_SERVER,
+
+            from: process.env.EMAIL_FROM,
         }),
-        // ...add more providers here
     ],
 })

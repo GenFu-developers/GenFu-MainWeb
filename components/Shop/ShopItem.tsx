@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { urlFor } from '../../sanity'
 import { ShopItem } from '../../typings'
 import { motion } from 'framer-motion'
-import Button from '../Button'
+import Button from '../Button/Button'
 import Tooltip from '../Tooltip/index';
 interface Props {
     shopItem: ShopItem;
