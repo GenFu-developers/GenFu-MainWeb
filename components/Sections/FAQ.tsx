@@ -1,4 +1,7 @@
 import Collaps from "../Collaps";
+import { motion } from "framer-motion";
+import { useScroll } from "../Framer/useScroll";
+import { plopAnimation } from "../Framer/animations";
 
 const FAQHeader = {
     title: 'The quick, brown fox jumps over a lazy dogy',
@@ -36,8 +39,15 @@ const FAQData = [
 
 
 export default function Faq() {
+    const [element, controls] = useScroll()
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mt-96 md:mt-0 mb-20">
+        // @ts-ignore
+        <motion.div ref={element} animate={controls}
+            variants={plopAnimation}
+            transition={{
+                duration: .6,
+            }}
+            className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mt-96 md:mt-0 mb-20">
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="flex flex-col mb-16 sm:text-center">
                     <a href="/" className="mb-6 sm:mx-auto">
@@ -70,6 +80,6 @@ export default function Faq() {
                 <Collaps data={FAQData} />
 
             </div>
-        </div>
+        </motion.div>
     );
 };

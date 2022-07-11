@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 // custom components
 import Navbar from '../components/Menu/Navbar';
-import Hero from '../components/Hero/HeroHeader';
+import Hero from '../components/Hero/index';
 import Features from '../components/Features';
 import WMUASection from '../components/Sections/WasMachtUnsAus';
 import Steps from '../components/Steps/index';
@@ -13,6 +13,8 @@ import { sanityClient } from '../sanity';
 import { Alert } from '../typings';
 import AlertComponent from '../components/Alert/LandingPageAlert';
 import Faq from '../components/Sections/FAQ';
+import { useSession } from 'next-auth/react';
+import PermissionRoles from '../lib/PermissionRoles';
 
 interface Props {
   alert: Alert
@@ -20,6 +22,7 @@ interface Props {
 
 
 export default function Home({ alert }: Props) {
+  const { data: session } = useSession()
   return (
     <div className='background-light dark:background-dark overflow-x-hidden'>
       < Head >
@@ -27,6 +30,18 @@ export default function Home({ alert }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head >
       <AlertComponent alert={alert} />
+      {
+        // @ts-ignore
+        PermissionRoles[session?.user?.role] >= PermissionRoles['staff'] &&
+        <AlertComponent alert={
+          {
+            name: 'GenFu Workspace Alert',
+            text: 'Ich sehe du bist berechtigt zu Arbeiten :)',
+            link: '/workspace/home',
+            linkText: 'GenFu Workspace'
+          }
+        } />
+      }
       <Navbar />
       <Hero />
       <div className="flex flex-col">

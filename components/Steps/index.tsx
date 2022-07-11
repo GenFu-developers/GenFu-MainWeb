@@ -81,13 +81,12 @@ function index() {
                     </div>
                 </div>
             </motion.div>
-            <div className="mt-14 grid gap-8 row-gap lg:grid-cols-3 container mx-auto max-w-6xl">
+            <div className="mt-14 grid gap-8 items-center row-gap lg:grid-cols-3 container mx-auto max-w-6xl">
                 {stepData.map((item, idx) => (
                     <Step title={item.title} text={item.text} icon={item.icon} idx={idx} last={idx === stepData.length - 1} />
                 ))}
             </div>
-
-        </div >
+        </div>
     )
 }
 

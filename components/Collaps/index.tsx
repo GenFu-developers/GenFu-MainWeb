@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion'
+import { useScroll } from '../Framer/useScroll'
 
 interface ItemProps {
     title: string;
@@ -8,9 +9,20 @@ interface ItemProps {
 }
 
 const Item = ({ title, children, last }: ItemProps) => {
+    const [element, controls] = useScroll()
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className={`${!last ? 'border-b' : ''} border-txt-dark/20 dark:border-txt-light/20`}>
+        // @ts-ignore
+        <motion.div ref={element} animate={controls}
+            variants={{
+                hidden: { opacity: 0, scale: 0 },
+                show: { opacity: 1, scale: 1 },
+            }}
+            transition={{
+                duration: .6,
+                delay: .2
+            }}
+            className={`${!last ? 'border-b' : ''} border-txt-dark/20 dark:border-txt-light/20`}>
             {/* @ts-ignore */}
             <button type="button" aria-label="Open item" title="Open item"
                 className="text-txt-dark dark:text-txt-light flex items-center justify-between w-full p-4 focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
@@ -46,7 +58,7 @@ const Item = ({ title, children, last }: ItemProps) => {
                     <p className="text-txt-dark/70 dark:text-txt-light/70">{children}</p>
                 </motion.div>
             )}
-        </div>
+        </motion.div>
     );
 };
 
