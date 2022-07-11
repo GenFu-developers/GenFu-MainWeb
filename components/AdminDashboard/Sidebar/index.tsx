@@ -80,6 +80,7 @@ function Sidebar({ gridClassName }: Props) {
             {/* Nav Links */}
             <div className={`flex flex-col items-center gap-4 mt-4`}>
                 {navLinks.map((item) => (
+                    // @ts-ignore
                     <SidebarNavItem name={item.name} path={item.path} role={item.role} />
                 ))}
             </div>
