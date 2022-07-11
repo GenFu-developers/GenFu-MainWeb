@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { useScroll } from '../Framer/useScroll';
+import ShortenText from '../ShortenText';
 
 interface Props {
     name: string,
@@ -35,7 +36,12 @@ export default function TeamCard({ name, role, text, img, animationReverse }: Pr
                     <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">{role}</p>
                 </div>
             </div>
-            <p className="mt-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-300">{text} </p>
+            <div className='mt-5'>
+                <ShortenText
+                    textLength={32} text={text}
+                    buttonClassName={`group-hover:text-txt-light`}
+                    textClassName={'text-gray-500 dark:text-gray-300 group-hover:text-gray-300'} />
+            </div>
             {/* socials */}
             {/* <div className="flex mt-4 -mx-2">
                             <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">

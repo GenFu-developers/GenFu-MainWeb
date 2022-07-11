@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useScroll } from "../Framer/useScroll";
 import { plopAnimation } from "../Framer/animations";
 import Modal from "../Modals/index";
+import ShortenText from "../ShortenText";
 
 interface Step {
     title: string;
@@ -19,7 +20,7 @@ export default function Step({ title, text, icon, idx, last }: Step) {
     return (
         // @ts-ignore
         <div ref={element}
-            className="relative text-center">
+            className={`relative text-center ${idx % 2 === 0 ? '-top-14' : '-bottom-14'}`}>
             {/* @ts-ignore */}
             <motion.h5 animate={controls}
                 variants={{
@@ -30,7 +31,10 @@ export default function Step({ title, text, icon, idx, last }: Step) {
                     duration: .8,
                     delay: .4
                 }}
-                className="mb-2 text-2xl font-black text-txt-dark dark:text-txt-light">SCHRITT {idx + 1}</motion.h5>
+                className="mb-2 text-2xl font-black text-txt-dark dark:text-txt-light">
+                SCHRITT {idx + 1}
+            </motion.h5>
+            <label className="italic relative -top-3">{title}</label>
             {/* @ts-ignore */}
             <motion.div animate={controls}
                 variants={{
@@ -70,7 +74,7 @@ export default function Step({ title, text, icon, idx, last }: Step) {
                             delay: .7
                         }}
                         className="max-w-xs mb-3 text-sm sm:mx-auto">
-                        {text.customer}
+                        <ShortenText textLength={9} text={text.customer} />
                     </motion.p>
                 </div>
                 <div className="mx-auto flex flex-col  relative md:-top-10 gap-5">
@@ -98,15 +102,15 @@ export default function Step({ title, text, icon, idx, last }: Step) {
                             delay: .7
                         }}
                         className="max-w-xs  mb-3 text-sm sm:mx-auto">
-                        {text.service}
+                        <ShortenText textLength={9} text={text.service} />
                     </motion.p>
                 </div>
             </div>
-            <Modal buttonText="mehr..." buttonStyle="none" buttonClassName="mx-auto relative  ">
+            {/* <Modal buttonText="mehr..." buttonStyle="none" buttonClassName="mx-auto relative -top-20  ">
                 <div>
                     pop up div
                 </div>
-            </Modal>
+            </Modal> */}
             <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
                 {idx === 2 || last ? null :
                     // @ts-ignore

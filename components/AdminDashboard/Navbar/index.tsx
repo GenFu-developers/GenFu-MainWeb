@@ -9,21 +9,20 @@ interface Props {
         name?: string | null;
         image?: string | null;
     }
-    gridClassName: string
 }
 
 function Navbar({ user, gridClassName }: Props) {
     return (
-        <nav className={`[ ${gridClassName} ] container w-full bg-light-container dark:bg-dark-container px-5 py-2 rounded-lg shadow-md`}>
+        <nav className={`h-20 absolute left-0 top-0 w-full bg-light-container dark:bg-dark-container px-5 py-2 rounded-lg shadow-md`}>
             <div className='flex justify-between'>
                 <div className='flex place-items-center text-4xl font-black'>
-                    <Button type='link' buttonStyle='none' href='/workspace/home'>
+                    <Button type='link' buttonStyle='none' href='/studio/uebersicht'>
                         <CircleLogo size={{
                             width: 10,
                             height: 10
                         }} />
                     </Button>
-                    <h2>Workspace</h2>
+                    <h2>Studio</h2>
                 </div>
 
 

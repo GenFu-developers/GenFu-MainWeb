@@ -2,6 +2,8 @@ import AnImage from '../AnImage/index'
 import { motion } from 'framer-motion';
 import { useScroll } from '../Framer/useScroll';
 import { boxAnimation } from '../Framer/animations';
+import Modal from '../Modals/index';
+import ShortenText from '../ShortenText';
 
 export default function Product() {
     const [element, controls] = useScroll()
@@ -40,8 +42,18 @@ export default function Product() {
                             }}
                             className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
                             Wir sind innovative Visionäre, mit dem Wille, Bildung/Wissen zu vermitteln und ebenfalls Probleme zu lösen. Wir analysieren jeden Schritt von uns aber auch die Schritte unserer Wettbewerber.
-                            Grundsätzlich fehlt ein tiefes Vertrauen zwischen Kunde und Firma. Wir beziehen Vertrauen, in alle Bereiche des Businessplans und der Skalierung mit ein, ebenfalls wie unseren anderen Alleinstellungmerkmale (Vision, Service, Qualität, Vertrauen, Partner, Nachhaltigkeit).
-                            Falls du wissen willst, was ein USP ist und was unserer ist. Schaue (hier)
+                            <Modal buttonText='mehr...' buttonStyle='none'>
+                                <div className='flex flex-col gap-4'>
+                                    <h1 className='text-shadow-md-dark text-4xl font-black text-primary'>Was macht uns aus?</h1>
+                                    <p className='border-l-2 pl-4'>Wir sind innovative Visionäre, mit dem Wille, Bildung/Wissen zu vermitteln und ebenfalls Probleme zu lösen.
+                                        Wir analysieren jeden Schritt von uns aber auch die Schritte unserer Wettbewerber.
+                                        <br />
+                                        <br />
+                                        Grundsätzlich fehlt ein tiefes Vertrauen zwischen Kunde und Firma. Wir beziehen Vertrauen, in alle Bereiche des Businessplans und der Skalierung mit ein, ebenfalls wie unseren anderen Alleinstellungmerkmale (Vision, Service, Qualität, Vertrauen, Partner, Nachhaltigkeit).
+                                        Falls du wissen willst, was ein USP ist und was unserer ist. Schaue (hier)
+                                    </p>
+                                </div>
+                            </Modal>
                         </motion.p>
                     </div>
                     <div className="grid gap-8 row-gap-8 sm:grid-cols-2">
@@ -70,9 +82,18 @@ export default function Product() {
                             <h6 className="mb-2 font-semibold text-xl md:text-2xl leading-5 dark:text-txt-light">
                                 Dienstleistung
                             </h6>
-                            <p className="text-md text-gray-900 dark:text-txt-light/80">
-                                Wir haben es uns zur Aufgabe gemacht, alle W-Fragen rund um das Thema Websites zu beantworten, Websites zu erstellen, zu pflegen/Warten und insgesamt Probleme zu lösen, die verbunden mit digitalen Dienstleistungen auftreten.
-                            </p>
+                            {/* <p className="text-md text-gray-900 dark:text-txt-light/80">
+                                Wir haben es uns zur Aufgabe gemacht, alle W-Fragen rund um das Thema Websites zu beantworten,
+                                <div className=''>
+                                    Websites zu erstellen, zu pflegen/Warten und insgesamt Probleme zu lösen, die verbunden mit
+                                    digitalen Dienstleistungen auftreten.
+                                </div>
+                            </p> */}
+                            <ShortenText
+                                text='Wir haben es uns zur Aufgabe gemacht, alle W-Fragen rund um das Thema 
+                                    Websites zu beantworten, Websites zu erstellen, zu pflegen/Warten und 
+                                    insgesamt Probleme zu lösen, die verbunden mit digitalen Dienstleistungen 
+                                    auftreten.' textLength={20} />
                         </motion.div>
                         {/* @ts-ignore */}
                         <motion.div animate={controls}
@@ -99,9 +120,10 @@ export default function Product() {
                             <h6 className="mb-2 font-semibold text-xl md:text-2xl leading-5 dark:text-txt-light">
                                 Kundenverhältnis
                             </h6>
-                            <p className="text-md text-gray-900 dark:text-txt-light/80">
-                                Eine starke Kundenbindung gehört für uns bei GenFu mit zu den fundamentalen Elementen. Würden wir das nicht anstreben, wäre unser Unterfangen sinnlos. Vertrauen zurückbringen, welches durch fehlende Dienstleistungen verloren gegangen ist.
-                            </p>
+                            <ShortenText
+                                text='Eine starke Kundenbindung gehört für uns bei GenFu 
+                                mit zu den fundamentalen Elementen. Würden wir das nicht anstreben, wäre 
+                                unser Unterfangen sinnlos. Vertrauen zurückbringen, welches durch fehlende Dienstleistungen verloren gegangen ist.' textLength={20} />
                         </motion.div>
                     </div>
                 </div>
@@ -111,6 +133,6 @@ export default function Product() {
                 />
 
             </div>
-        </div>
+        </div >
     );
 };

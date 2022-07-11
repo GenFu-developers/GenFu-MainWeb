@@ -10,6 +10,9 @@
     .background-light {
         @apply text-txt-dark bg-gradient-to-tr from-background-light-2 via-background-light to-background-light-2 bg-fixed
     }
+    .text-shadow-md-dark {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
     .hero-clip-path {
         clip-path: polygon(0% 0%, 100% 0%, 100% 56.8%, 0% 78.3%);
     }
@@ -63,10 +66,6 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-.text-shadow-md-dark {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 

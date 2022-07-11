@@ -8,7 +8,7 @@ const teamData = [
     {
         name: 'Hannes Tiago Luiz König',
         role: 'CEO',
-        text: `Ich bin Hannes Tiago Luiz König, adoptiert kurz nach meiner Geburt aus Brasilien im Jahr 1993.Auf dem Gymnasium angefangen, doch im Halbjahr der 8ten Klasse auf die Realschule gewechselt.Ausbildung im Verkauft gestartet bei SportScheck GmbH, Erfahrungen gesammelt in mehreren Einzelhandel Shops, Großhandel und Logistik. Ebenfalls in einer Medienagentur gearbeitet und Erfahrungen in Management und Marketing gesammelt.Später eine Ausbildung als Gärtner für Gemüseanbau gestartet und mit Erfolg beendet.Eine Phase der Arbeitslos- und Planlosigkeit erfolgte bis schließlich die Planung und Umsetzung von GenFu erfolgte.`,
+        text: `Ich bin Hannes Tiago Luiz König, adoptiert kurz nach meiner Geburt aus Brasilien im Jahr 1993. Auf dem Gymnasium angefangen, doch im Halbjahr der 8ten Klasse auf die Realschule gewechselt.Ausbildung im Verkauft gestartet bei SportScheck GmbH, Erfahrungen gesammelt in mehreren Einzelhandel Shops, Großhandel und Logistik. Ebenfalls in einer Medienagentur gearbeitet und Erfahrungen in Management und Marketing gesammelt.Später eine Ausbildung als Gärtner für Gemüseanbau gestartet und mit Erfolg beendet.Eine Phase der Arbeitslos- und Planlosigkeit erfolgte bis schließlich die Planung und Umsetzung von GenFu erfolgte.`,
     },
     {
         name: 'Pablo Kurzmann',
@@ -32,14 +32,14 @@ export default function index() {
                         duration: 0.8,
                     }}
                 >
-                    <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Das <span className="text-primary">sind wir</span></h1>
+                    <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Das <label className="text-primary">sind wir</label></h1>
                     <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
                         Ursprünglich kommen wir aus völlig unterschiedlichen Bereichen.
                         Dennoch streben wir nach einem gemeinsamen Ziel: Unabhängige Selbstverwirklichung.
                         Lange haben wir uns Gedanken gemacht, wie wir unsere Stärken und Energien bündeln können und so ist "Generation Future" kurz "GenFu" entstanden.
                     </p>
                 </motion.div>
-                <div className="flex flex-col  md:flex-row gap-5">
+                <div className="flex flex-col mt-20  md:flex-row gap-5">
                     {teamData.map((item, idx) => (
                         <TeamCard name={item.name} role={item.role} animationReverse={idx != 0} text={item.text} />
                     ))}

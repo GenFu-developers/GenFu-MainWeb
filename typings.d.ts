@@ -76,3 +76,15 @@ export interface Alert {
     link?: string;
     linkText?: string;
 }
+
+export type Role = 'customer' | 'staff' | 'admin'
+
+export interface User {
+    _id: ObjectId;
+    name: string;
+    email: string;
+    image: string;
+    role: Role;
+    banned: false;
+    emailVerified: null
+}

@@ -26,6 +26,7 @@
     "react-scroll": "^1.8.7",
     "react-tooltip": "^4.2.21",
     "react-tsparticles": "^2.1.0",
+    "reactjs-dropdown-component": "^1.2.0",
     "tsparticles": "^2.1.0"
   },
   "devDependencies": {
