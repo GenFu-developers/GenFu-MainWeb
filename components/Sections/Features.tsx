@@ -53,7 +53,7 @@ export default function Feature() {
                     </p>
                 </div>
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-txt-light sm:text-4xl md:mx-auto">
-                    <span className="relative inline-block">
+                    <label className="relative inline-block">
                         <svg
                             viewBox="0 0 52 24"
                             fill="currentColor"
@@ -77,7 +77,7 @@ export default function Feature() {
                             />
                         </svg>
                         Tranzparenz - eine kostenlose Dienstleistung
-                    </span>
+                    </label>
                 </h2>
                 <p className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
                     Hier bekommst du einen Einblick in unseren Businessplan. Tiefe Transparenz ist eine unserer kostenlosen Dienstleistungen.
@@ -85,9 +85,8 @@ export default function Feature() {
             </motion.div>
             <motion.div
                 className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
-                {/* @ts-ignore */}
                 {featuresData.map((item) => (
-
+                    // @ts-ignore
                     <motion.div animate={controls}
                         variants={{
                             'hidden': { x: -400, y: 100, scale: 0, opacity: 0 },
