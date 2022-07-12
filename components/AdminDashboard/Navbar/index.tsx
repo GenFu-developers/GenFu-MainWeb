@@ -11,7 +11,7 @@ interface Props {
     }
 }
 
-function Navbar({ user, gridClassName }: Props) {
+function Navbar({ user }: Props) {
     return (
         <nav className={`h-20 absolute left-0 top-0 w-full bg-light-container dark:bg-dark-container px-5 py-2 rounded-lg shadow-md`}>
             <div className='flex justify-between'>
