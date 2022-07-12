@@ -47,10 +47,10 @@ function WaitingScreen() {
                         </div>
                         <div className="relative flex-grow w-full flex-col gap-1">
                             <label className="leading-7 text-sm text-txt-dark/50 dark:text-txt-light/50">Email</label>
-                            <input type="email" required name="email" className="w-full  bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-txt-dark/70 dark:text-txt-light/70 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="email" required name="email" className="w-full  bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 bg-transparent focus:ring-2 focus:ring-primary text-base outline-none text-txt-dark/70 dark:text-txt-light/70 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                         </div>
                         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: .9 }}
-                            className="mx-auto text-white bg-primary-green border-0 py-2 px-8 focus:outline-none hover:brightness-110 rounded text-lg">Absenden</motion.button>
+                            className="mx-auto text-white bg-primary-green focus:ring-primary border-0 py-2 px-8 focus:outline-none hover:brightness-110 rounded text-lg">Absenden</motion.button>
                     </form>
                 </div>
             </section>

@@ -7,52 +7,40 @@ import { plopAnimation } from "../Framer/animations";
 const stepData = [
     {
         title: `Analysegespräch`,
-        text: {
-            service: 'Im Analysegespräch finden wir herraus was für ein Paket am besten für dich ist und welche Daten für die Entwicklung der Website benötigt werden.',
-            customer: 'Im Analysegespräch finden wir herraus was für ein Paket am besten für dich ist und welche Daten für die Entwicklung der Website benötigt werden.'
-        },
+        text: `Was soll deine Website präsentieren? Welches Paket ist das richtige für Dich?
+               Welche Daten werden für die Entwicklung benötigt? 
+               Diese Fragen beantworten wir gemeinsam in einem Analysegespräch, 
+               um deine Website bestmöglich nach Deinen Wünschen zu gestalten.`,
         icon: <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-8 h-8 dark:text-txt-light text-txt-dark/60" viewBox="0 0 24 24">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
         </svg>
     },
     {
         title: `Erstentwurf`,
-        text: {
-            service: 'Nun bekommst du einen Erstentwurf vom ungefähren aussehen und den Funktionalitäten der Website.',
-            customer: 'Nun bekommst du einen Erstentwurf vom ungefähren aussehen und den Funktionalitäten der Website.'
-        },
+        text: 'In spätestens 5 Werktagen hast Du Deinen ersten Entwurf vorliegen. Hier hast du die Möglichkeit Änderungswünsche und weitere Funktionen zu besprechen.',
         icon: <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-8 h-8 dark:text-txt-light text-txt-dark/60" viewBox="0 0 24 24">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
         </svg>
     },
     {
         title: `Umsetzung`,
-        text: {
-            service: 'Wenn du zufrieden mit dem Erstentwurf bist kommen wir zur Umsetzung und fangen an deine Website technisch zu entwickeln.',
-            customer: 'Wenn du zufrieden mit dem Erstentwurf bist kommen wir zur Umsetzung und fangen an deine Website technisch zu entwickeln.'
-        },
+        text: 'Bist du zufrieden mit dem Erstentwurf? Wir gehen hier an die Umsetzung. Hast du noch Änderungswünsche? Dann gehen wir zurück zu Schritt 2.',
         icon: <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-8 h-8 dark:text-txt-light text-txt-dark/60" viewBox="0 0 24 24">
             <circle cx="12" cy="5" r="3"></circle>
             <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
         </svg>
     },
     {
-        title: `Umsetzung`,
-        text: {
-            service: 'Nach vollendeter Umsetzung hast du noch die Möglichkeit die Feinheiten nachbessern zu lassen.',
-            customer: 'Nach vollendeter Umsetzung hast du noch die Möglichkeit die Feinheiten nachbessern zu lassen.'
-        },
+        title: `Feintuning`,
+        text: 'Nun geht es an den Feinschliff. Wir besprechen letzte Details und Änderungen und gehen dann in die Endphase der Entwicklung. ',
         icon: <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-8 h-8 dark:text-txt-light text-txt-dark/60" viewBox="0 0 24 24">
             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
         </svg>
     },
     {
-        title: ``,
-        text: {
-            service: 'Nun hast du deine fertige Website und kannst diese entweder über uns oder auf eigene Faust online stellen.',
-            customer: 'Nun hast du deine fertige Website und kannst diese entweder über uns oder auf eigene Faust online stellen.'
-        },
+        title: `Hosting`,
+        text: 'Die Website ist fertig! Juhu! Wir stellen nach Deiner Freigabe Deine Homepage online. Ab jetzt bist du im Netz vertreten. Du kannst Deine Website auch selbst online stellen. ',
         icon: <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-8 h-8 dark:text-txt-light text-txt-dark/60" viewBox="0 0 24 24">
             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>

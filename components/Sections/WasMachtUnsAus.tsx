@@ -41,16 +41,16 @@ export default function Product() {
                                 duration: 0.8,
                             }}
                             className="text-base text-gray-700 dark:text-txt-light/80 md:text-lg">
-                            Wir sind innovative Visionäre, mit dem Wille, Bildung/Wissen zu vermitteln und ebenfalls Probleme zu lösen. Wir analysieren jeden Schritt von uns aber auch die Schritte unserer Wettbewerber.
+                            Wir sind innovative Visionäre, mit dem Willen, Wissen zu vermitteln und Probleme zu lösen.
+                            Unser einmaliges Versprechen ist...
                             <Modal buttonText='mehr...' buttonStyle='none'>
                                 <div className='flex flex-col gap-4'>
                                     <h1 className='text-shadow-md-dark text-4xl font-black text-primary'>Was macht uns aus?</h1>
-                                    <p className='border-l-2 pl-4'>Wir sind innovative Visionäre, mit dem Wille, Bildung/Wissen zu vermitteln und ebenfalls Probleme zu lösen.
-                                        Wir analysieren jeden Schritt von uns aber auch die Schritte unserer Wettbewerber.
-                                        <br />
-                                        <br />
-                                        Grundsätzlich fehlt ein tiefes Vertrauen zwischen Kunde und Firma. Wir beziehen Vertrauen, in alle Bereiche des Businessplans und der Skalierung mit ein, ebenfalls wie unseren anderen Alleinstellungmerkmale (Vision, Service, Qualität, Vertrauen, Partner, Nachhaltigkeit).
-                                        Falls du wissen willst, was ein USP ist und was unserer ist. Schaue (hier)
+                                    <p className='border-l-2 pl-4'>
+                                        Wir sind innovative Visionäre, mit dem Willen, Wissen zu vermitteln und Probleme zu lösen.
+                                        Unser einmaliges Versprechen ist, dass der Kunde immer über den Stand der Entwicklung seiner Homepage informiert ist.
+                                        Die aktuelle Marktsituation und neue Trends haben wir im Blick.
+                                        Für GenFu ist Transparenz das oberste Gebot. Unsere Kunden kennen unseren Businessplan und unsere Skalierung.
                                     </p>
                                 </div>
                             </Modal>

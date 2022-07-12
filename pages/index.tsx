@@ -44,11 +44,11 @@ export default function Home({ alert }: Props) {
         }
         <Navbar />
         <Hero />
-        <div className="flex flex-col">
-          <WMUASection />
-          <Partner />
-          <Features />
+        <div className="flex flex-col mt-20">
           <Steps />
+          <Features />
+          <Partner />
+          <WMUASection />
           <Team />
           <Faq />
         </div>

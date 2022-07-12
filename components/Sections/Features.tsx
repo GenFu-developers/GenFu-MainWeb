@@ -14,10 +14,7 @@ const featuresData = [
     },
     {
         title: 'Organisation und Team',
-        text: `Wir sind schon einen längeren Zeitraum, ein gut eingespieltes Team. Es ist heutzutage 
-               extrem schwer Menschen zu finden, die für die selbe Sache brennen und auch gemeinsam daran arbeiten 
-               wollen. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu 
-               nutzen um der Menschheit einen Mehrwert zu geben.`,
+        text: `Wir, Pablo und Hannes, sind ein eingespieltes Team und brennen für die gleiche Sache. Wir öffnen unsere Türen für alle Menschen, die danach streben ihr maximales Potential zu nutzen um der Menschheit einen Mehrwert zu geben. `,
     },
     {
         title: 'Organisches Wachstum',
@@ -26,9 +23,7 @@ const featuresData = [
     },
     {
         title: 'Community',
-        text: `Der Aufbau einer Community, gehört für uns ebenfalls dazu um ein gesundes und innovatives Umfeld zu schaffen. 
-               Nach langen Überlegungen haben wir uns entschlossen
-               folgende Wege zu gehen`,
+        text: `Der Aufbau einer Community schafft ein gesundes und innovatives Umfeld, in dem wir gemeinsam an neuen Ideen und Softwarelösungen arbeiten können. `,
     },
 
 ]
