@@ -4,10 +4,28 @@ import { ThemeProvider } from 'next-themes'
 import PageTransition from '../components/Framer/PageTransition'
 import { SessionProvider, useSession } from "next-auth/react"
 import PermissionRoles from '../lib/PermissionRoles'
+import Router from 'next/router'
+import { redirect } from 'next/dist/server/api-utils'
+import { useState, useEffect } from 'react'
 
 const publicPages = ['/']
 
+// const redirectPages = [
+//   { path: '/login', redirect: '/api/auth/signin' }
+// ]
+
 function MyApp({ Component, pageProps: { session, ...pageProps }, router }: AppProps) {
+  const [isSSRDone, setIsSSRDone] = useState(false)
+  useEffect(
+    function afterMount() {
+      setIsSSRDone(true);
+    },
+    [],
+  );
+  // if (isSSRDone) {
+  //   let redirecting = redirectPages.find(vendor => vendor.path === Router.pathname);;
+  //   if (redirecting) return Router.push(redirecting.redirect)
+  // }
   return (
 
     <SessionProvider session={session}>

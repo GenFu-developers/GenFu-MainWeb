@@ -62,7 +62,7 @@ export default ({ shadow }: Props) => {
                 <nav className="gap-5 hidden md:flex  items-center text-base md:ml-auto w-full">
                     {navigation.links.map((item, idx) => (
                         <Button key={idx} type="link" buttonStyle="none" href={item.path}>
-                            <span className={`text-txt-dark dark:text-txt-light hover:text-txt-dark/70  dark:hover:text-txt-light/70 ${router.pathname === item.path ? 'border-b-2 border-primary' : ''}`}>{item.title}</span>
+                            <label className={`text-txt-dark dark:text-txt-light hover:text-txt-dark/70  dark:hover:text-txt-light/70 ${router.pathname === item.path ? 'border-b-2 border-primary' : ''}`}>{item.title}</label>
                         </Button>
                     ))}
                 </nav>
@@ -72,9 +72,9 @@ export default ({ shadow }: Props) => {
                 <div className=" hidden md:flex gap-5  w-full justify-end">
                     {navigation.buttons.map((navItem) => (
                         <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
-                            <span>
+                            <label>
                                 {navItem.title}
-                            </span>
+                            </label>
                         </Button>
                     ))}
                     {isSSRDone ? ThemeSwitcher() : null}
@@ -88,14 +88,14 @@ export default ({ shadow }: Props) => {
                             <div className="flex gap-5">
                                 {navigation.buttons.map((navItem) => (
                                     <Button type="link" href={navItem.path} buttonStyle={navItem.style == 'success' || navItem.style == 'none' || navItem.style == 'outline' ? navItem.style : 'primary'}>
-                                        <span>{navItem.title}</span>
+                                        <label>{navItem.title}</label>
                                     </Button>
                                 ))}
                                 {isSSRDone ? ThemeSwitcher() : null}
                             </div>
                             {navigation.links.map((navItem) => (
                                 <Button buttonStyle="none" type="link" href={navItem.path} >
-                                    <span className="text-txt-dark dark:text-txt-light">{navItem.title}</span>
+                                    <label className="text-txt-dark dark:text-txt-light">{navItem.title}</label>
                                 </Button>
                             ))}
                         </motion.div>
