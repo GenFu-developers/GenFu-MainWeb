@@ -7,6 +7,7 @@ import PermissionRoles from '../lib/PermissionRoles'
 import Router from 'next/router'
 import { redirect } from 'next/dist/server/api-utils'
 import { useState, useEffect } from 'react'
+import WaitingScreen from '../components/WaitingScreen/WaitingScreen'
 
 const publicPages = ['/']
 
@@ -22,12 +23,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, router }: AppP
     },
     [],
   );
-  // if (isSSRDone) {
-  //   let redirecting = redirectPages.find(vendor => vendor.path === Router.pathname);;
-  //   if (redirecting) return Router.push(redirecting.redirect)
-  // }
+  if (isSSRDone && router.pathname !== '/') {
+    if (!session?.user?.role?.admin) {
+      router.push('/')
+    }
+  }
   return (
-
     <SessionProvider session={session}>
       {/* @ts-ignore */}
       {Component.auth ? (

@@ -71,7 +71,6 @@ export const getServerSideProps = async () => {
   }`;
 
     const posts = await sanityClient.fetch(query);
-    console.log(posts);
 
     return {
         props: {

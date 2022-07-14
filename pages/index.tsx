@@ -15,7 +15,7 @@ import AlertComponent from '../components/Alert/LandingPageAlert';
 import Faq from '../components/Sections/Facts';
 import { useSession } from 'next-auth/react';
 import PermissionRoles from '../lib/PermissionRoles';
-import WaitingScreen from '../components/Hero/WaitingScreen'
+import WaitingScreen from '../components/WaitingScreen/WaitingScreen'
 
 interface Props {
   alert: Alert,

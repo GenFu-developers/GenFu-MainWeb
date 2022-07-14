@@ -5,8 +5,13 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
+
     theme: {
         extend: {
+            container: {
+                padding: '1.5rem',
+                center: true,
+            },
             screens: {
                 sm: '480px',
                 md: '768px',

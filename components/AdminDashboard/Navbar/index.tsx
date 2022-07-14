@@ -13,7 +13,7 @@ interface Props {
 
 function Navbar({ user }: Props) {
     return (
-        <nav className={`h-20 absolute left-0 top-0 w-full bg-light-container dark:bg-dark-container px-5 py-2 rounded-lg shadow-md`}>
+        <nav className={`h-20  mt-0 w-full bg-light-container dark:bg-dark-container px-5 py-2 rounded-lg shadow-md`}>
             <div className='flex justify-between'>
                 <div className='flex place-items-center text-4xl font-black'>
                     <Button type='link' buttonStyle='none' href='/studio/uebersicht'>
@@ -24,7 +24,6 @@ function Navbar({ user }: Props) {
                     </Button>
                     <h2>Studio</h2>
                 </div>
-
 
                 <div className='flex gap-5'>
                     {/* user profile */}
