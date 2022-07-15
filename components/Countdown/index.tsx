@@ -45,10 +45,10 @@ function index() {
 
 
     return (
-        <div className="text-6xl text-center flex md:gap-4 w-full items-center justify-center text-txt-dark dark:text-txt-light  scale-75 md:scale-100 cursor-default">
+        <div className="text-6xl text-center flex md:gap-4 w-full items-center justify-center text-txt-dark dark:text-txt-light scale-[50%] md:scale-100 cursor-default">
             <Button buttonStyle='none' type='button'>
                 <motion.div
-                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: .5 }}
+                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: .5, type: 'spring' }}
                     className={`w-24 mx-1 p-2 ${radialBg} rounded-lg`}>
                     <div className="font-mono leading-none" x-text="days">{timeDisplay.days}</div>
                     <div className="font-mono uppercase text-sm leading-none text-txt-dark dark:text-txt-light">Tage</div>
@@ -56,7 +56,7 @@ function index() {
             </Button>
             <Button type='button' buttonStyle='none'>
                 <motion.div
-                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: .8 }}
+                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: .8, type: 'spring' }}
                     className={`w-24 mx-1 p-2 ${radialBg} rounded-lg`}>
                     <div className="font-mono leading-none" x-text="hours">{timeDisplay.hours}</div>
                     <div className="font-mono uppercase text-sm leading-none text-txt-dark dark:text-txt-light">Stunden</div>
@@ -65,7 +65,7 @@ function index() {
             <Button type='button' buttonStyle='none'>
 
                 <motion.div
-                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: 1.1 }}
+                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: 1.1, type: 'spring' }}
                     className={`w-24 mx-1 p-2 ${radialBg} rounded-lg`}>
                     <div className="font-mono leading-none" x-text="minutes">{timeDisplay.minutes}</div>
                     <div className="font-mono uppercase text-sm leading-none text-txt-dark dark:text-txt-light">Minuten</div>
@@ -74,7 +74,7 @@ function index() {
             <Button type='button' buttonStyle='none'>
 
                 <motion.div
-                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: 1.4 }}
+                    animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ delay: 1.4, type: 'spring' }}
                     className={`w-24 mx-1 p-2 ${radialBg} rounded-lg`}>
                     <div className="font-mono leading-none" x-text="seconds">{timeDisplay.seconds}</div>
                     <div className="font-mono uppercase text-sm leading-none text-txt-dark dark:text-txt-light">Sekunden</div>
