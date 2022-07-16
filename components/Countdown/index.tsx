@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Button from '../Button/Button'
 
-const radialBg = 'bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-200 dark:from-indigo-500 dark:via-indigo-600 dark:to-indigo-500'
+const radialBg = 'bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-200 dark:from-indigo-500 dark:via-indigo-600 dark:to-indigo-500 shadow-lg shadow-[#00FFFF]'
 
 const end = new Date("2022-08-14T19:21:37.997Z")
 

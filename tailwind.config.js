@@ -8,6 +8,10 @@ module.exports = {
 
     theme: {
         extend: {
+            boxShadow: {
+                '3d': `-10px -10px 15px rgba(0,0,0, .3),
+                        10px 10px 15px rgba(0,0,0, .3)`
+            },
             container: {
                 padding: '1.5rem',
                 center: true,
