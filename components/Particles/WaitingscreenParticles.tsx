@@ -64,6 +64,7 @@ const WaitingScreenParticles = () => {
                         },
                         "repulse": {
                             "distance": 400,
+                            // @ts-ignore
                             "divs": {
                                 "distance": 200,
                                 "duration": 0.4,
@@ -95,6 +96,7 @@ const WaitingScreenParticles = () => {
                             }
                         },
                         "enable": true,
+                        // @ts-ignore
                         "outModes": {
                             "bottom": "out",
                             "left": "out",
@@ -111,6 +113,7 @@ const WaitingScreenParticles = () => {
                         "value": 160
                     },
                     "opacity": {
+                        // @ts-ignore
                         "random": {
                             "enable": true
                         },
@@ -125,6 +128,7 @@ const WaitingScreenParticles = () => {
                         }
                     },
                     "size": {
+                        // @ts-ignore
                         "random": {
                             "enable": true
                         },
